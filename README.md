@@ -31,3 +31,8 @@
 - Hero parallax (must checkout) https://ui.aceternity.com/components/hero-parallax
 - Infinite moving cards (horizontal) https://ui.aceternity.com/components/infinite-moving-cards
 - Input placeholder https://ui.aceternity.com/components/placeholders-and-vanish-input
+
+
+Update metadata of the app
+fix grid for mobile devices in skills
+Add projects
