@@ -34,7 +34,7 @@ function Progress({ value }: { value: number }) {
   );
 }
 
-function page() {
+function Skills() {
   return (
     <div className=' mx-16 md:mx-34 min-h-screen flex flex-col items-center justify-center gap-8 md:gap-8 xl:gap-12 px-2 py-8 bg-transparent mb-10 md:mb-20'>
       <ShootingStars />
@@ -43,9 +43,9 @@ function page() {
         initial={{ opacity: 0, scale: 0 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        className='text-3xl md:text-4xl font-extrabold text-center mb-8 tracking-tight text-neutral-900 dark:text-neutral-100 font-sans'
+        className='border mb-8 text-2xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-black/40 to-black dark:from-white/85 dark:to-gray-50/40'
       >
-        SKILLS
+        Skills
       </motion.h1>
       <div className='grid grid-cols-1 md:grid-cols-2 gap-8 w-full '>
         {/* Frontend Card */}
@@ -260,4 +260,4 @@ function page() {
     </div>
   );
 }
-export default page;
+export default Skills;

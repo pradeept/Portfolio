@@ -1,0 +1,82 @@
+[
+  {
+    "projectName": "LingoGo",
+    "imgName": "lingoGo.png",
+    "description": "A LLM application to translate given input to specified language. This is the V1 of building a RAG Chatbot using Langchain.",
+    "stack": ["Next.JS", "Langchain", "TailwindCSS", "Perplexity"],
+    "learnings": [
+      "Langchain basics",
+      "Working with Perplexity API",
+      "Prompt engineering for better translation accuracy",
+      "Handling async data flow in Next.js",
+      "Optimizing API response time"
+    ],
+    "challengesFaced": [
+      "Streaming the response from API to client",
+      "Integrating SSE with Langchain Streaming functionality",
+      "Managing rate limits and API errors",
+      "Ensuring UI responsiveness during long requests",
+      "Debugging edge cases in language translation"
+    ],
+    "status": "Completed - V1",
+    "repo": "https://github.com/pradeept/chat-bot",
+    "url": "https://lingogo-langchain-perplexity.netlify.app/"
+  },
+  {
+    "projectName": "Featherlogs",
+    "imgName": "featherlogs.png",
+    "description": "A modern Fullstack Blog Application. This app provides seamless authentication, dynamic SEO and rich UX with beautiful animations.",
+    "stack": [
+      "Next.JS",
+      "Typescript",
+      "NextAuth",
+      "Mongoose",
+      "Motion(framer)",
+      "CSS Modules"
+    ],
+    "learnings": [
+      "API, Data fetching, Server actions and form state",
+      "Working with MongoDB Atlas, Nextauth and middleware",
+      "Implementing caching and revalidating and much more..",
+      "SEO optimization for dynamic content",
+      "Animating UI with Framer Motion",
+      "Managing authentication state across pages"
+    ],
+    "challengesFaced": [
+      "Integrating Nextauth SSO",
+      "Implenting middleware",
+      "Handling User, Admin and Visitor modes",
+      "Dealing with SSR and client hydration issues",
+      "Optimizing for mobile and accessibility"
+    ],
+    "status": "Completed",
+    "repo": "https://github.com/pradeept/featherlogs",
+    "url": "https://featherlogs.vercel.app/"
+  },
+  {
+    "projectName": "Edditor",
+    "imgName": "edditor.png",
+    "description": "Edditor is a rich text editor featuring Google OAuth login, Google Drive integration, and local document downloads for a seamless, secure, and user-friendly writing experience.",
+    "stack": [
+      "React.JS (TS)",
+      "Express.JS",
+      "Quill",
+      "Passport",
+      "Google Drive",
+      "TailwindCSS"
+    ],
+    "learnings": [
+      "Implementing Passport for handling authentication.",
+      "Google Drive APIs.",
+      "Integrating Google Oauth and much more.."
+    ],
+    "challengesFaced": [
+      "",
+      "Implenting middleware",
+      "Handling User, Admin and Visitor modes"
+    ],
+    "status": "Completed",
+    "repo": "https://github.com/pradeept/featherlogs",
+    "url": "https://featherlogs.vercel.app/"
+  }
+]
