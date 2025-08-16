@@ -4,7 +4,7 @@ import React from "react";
 
 function Loader({ text = "Loading..." }: { text?: string }) {
   return (
-    <div className='relative font-bold text-black [perspective:1000px] dark:text-white'>
+    <div className='relative text-2xl font-bold text-black [perspective:1000px] dark:text-white'>
       <motion.span
         animate={{
           //   skew: [0, -40, 0],

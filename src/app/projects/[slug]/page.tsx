@@ -5,23 +5,41 @@ import { notFound } from "next/navigation";
 import { IconExternalLink, IconBrandGithub } from "@tabler/icons-react";
 import lingoGo from "../../../../public/projects/lingoGo.png";
 import featherLogs from "../../../../public/projects/featherlogs.png";
+import edditor from "../../../../public/projects/edditor.png";
+import emiCalc from "../../../../public/projects/emiCalculator.png";
+import expenseMgr from "../../../../public/projects/expenseMgr.png";
+import trelloClone from "../../../../public/projects/trelloClone.png";
+import infisical from "../../../../public/projects/infisical.png";
+import nextcloud from "../../../../public/projects/nextcloud.png";
+import provisionercli from "../../../../public/projects/provisionercli.png";
+import nullnet from "../../../../public/projects/nullnet.png";
 import Back from "@/components/Back";
 
 const images: Record<string, StaticImageData> = {
   "lingoGo.png": lingoGo,
   "featherlogs.png": featherLogs,
+  "edditor.png": edditor,
+  "emiCalculator.png": emiCalc,
+  "expenseMgr.png": expenseMgr,
+  "trelloClone.png": trelloClone,
+  "infisical.png": infisical,
+  "nextcloud.png": nextcloud,
+  "provisionercli.png": provisionercli,
+  "nullnet.png": nullnet,
 };
 
-export default function ProjectDetailPage({
+export default async function ProjectDetailPage({
   params,
 }: {
   params: { slug: string };
 }) {
   // Find project by slug (case-insensitive, spaces and special chars removed)
-  const normalize = (str: string) =>
-    str.toLowerCase().replace(/[^a-z0-9]/g, "");
+  const normalize = (str: string) => str.toLowerCase();
+  // If params.slug is a Promise (dynamic segment), await it
+  const slug =
+    typeof params.slug === "string" ? params.slug : await params.slug;
   const project = projectsData.find(
-    (p) => normalize(p.projectName) === normalize(params.slug)
+    (p) => normalize(p.slug) === normalize(slug)
   );
   if (!project) return notFound();
 

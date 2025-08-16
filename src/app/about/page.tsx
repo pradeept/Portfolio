@@ -18,7 +18,7 @@ function About() {
           initial={{ x: -40, opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
           transition={{ duration: 0.7, type: "spring" }}
-          className='border text-2xl mt-4 md:mt-8  md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-black/40 to-black dark:from-white/85 dark:to-gray-50/40 '
+          className='border text-5xl mt-4 md:mt-8  md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-black/40 to-black dark:from-white/85 dark:to-gray-50/40 '
         >
           About Me
         </motion.div>

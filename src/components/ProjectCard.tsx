@@ -7,6 +7,14 @@ import project1 from "../../public/profile.png";
 import lingoGo from "../../public/projects/lingoGo.png";
 import featherLogs from "../../public/projects/featherlogs.png";
 import edditor from "../../public/projects/edditor.png";
+import emiCalc from "../../public/projects/emiCalculator.png";
+import trelloClone from "../../public/projects/trelloClone.png";
+import expenseMgr from "../../public/projects/expenseMgr.png";
+import infisical from "../../public/projects/infisical.png";
+import nextcloud from "../../public/projects/nextcloud.png";
+import provisionercli from "../../public/projects/provisionercli.png";
+import nullnet from "../../public/projects/nullnet.png";
+
 import {
   IconArrowRight,
   IconBrandGithub,
@@ -18,6 +26,13 @@ const images: Record<string, StaticImageData> = {
   "lingoGo.png": lingoGo,
   "featherlogs.png": featherLogs,
   "edditor.png": edditor,
+  "emiCalculator.png": emiCalc,
+  "trelloClone.png": trelloClone,
+  "expenseMgr.png": expenseMgr,
+  "infisical.png": infisical,
+  "nextcloud.png": nextcloud,
+  "provisionercli.png": provisionercli,
+  "nullnet.png": nullnet,
 };
 
 function ProjectCard({ data }: { data: project }) {
@@ -109,7 +124,7 @@ function ProjectCard({ data }: { data: project }) {
           </>
         )}
         <button
-          onClick={() => router.push(`/projects/${data.projectName}`)}
+          onClick={() => router.push(`/projects/${data.slug}`)}
           className='self-end flex items-center text-blue-600 dark:text-blue-400 text-xs md:text-sm font-semibold  cursor-pointer  mb-2'
         >
           Read More

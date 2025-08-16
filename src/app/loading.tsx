@@ -3,7 +3,7 @@ import React from "react";
 
 function Loading() {
   return (
-    <div className='h-screen w-screen dark:bg-black bg-white  flex justify-center items-center'>
+    <div className='h-screen w-full overflow-hidden dark:bg-black bg-white  flex justify-center items-center'>
       <Loader />
     </div>
   );

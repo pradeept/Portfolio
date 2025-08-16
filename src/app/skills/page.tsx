@@ -43,7 +43,7 @@ function Skills() {
         initial={{ opacity: 0, scale: 0 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        className='border mb-8 text-2xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-black/40 to-black dark:from-white/85 dark:to-gray-50/40'
+        className='border mb-8 text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-black/40 to-black dark:from-white/85 dark:to-gray-50/40'
       >
         Skills
       </motion.h1>
@@ -235,25 +235,40 @@ function Skills() {
             DevOps <Progress value={70} />
           </h2>
           <ul className='flex gap-4 flex-wrap items-center justify-center text-base md:text-lg font-medium text-neutral-800 dark:text-neutral-200'>
-            <li>Docker </li> <span className='font-bold'> | </span>
-            <li>Kubernetes </li> <span className='font-bold'> | </span>
-            <li>GitOps </li> <span className='font-bold'> | </span>
-            <li>Helm Charts </li> <span className='font-bold'> | </span>
-            <li>Cloud (AWS, GCP, Heroku, Netlify, Domains) </li>{" "}
-            <span className='font-bold'> | </span>
-            <li>Terraform (IaC) </li> <span className='font-bold'> | </span>
-            <li>Ansible (Infra Configuration) </li>{" "}
-            <span className='font-bold'> | </span>
-            <li>
+            <li className='bg-gray-200 dark:bg-gray-900/40 py-1 px-1.5 rounded-md'>
+              Docker{" "}
+            </li>
+            <li className='bg-gray-200 dark:bg-gray-900/80 py-1 px-1.5'>
+              Kubernetes{" "}
+            </li>
+            <li className='bg-gray-200 dark:bg-gray-900/80 py-1 px-1.5'>
+              GitOps{" "}
+            </li>
+            <li className='bg-gray-200 dark:bg-gray-900/80 py-1 px-1.5'>
+              Helm Charts{" "}
+            </li>
+            <li className='bg-gray-200 dark:bg-gray-900/80 py-1 px-1.5'>
+              Cloud (AWS, GCP, Heroku, Netlify, Domains){" "}
+            </li>{" "}
+            <li className='bg-gray-200 dark:bg-gray-900/80 py-1 px-1.5'>
+              Terraform (IaC){" "}
+            </li>
+            <li className='bg-gray-200 dark:bg-gray-900/80 py-1 px-1.5'>
+              Ansible (Infra Configuration){" "}
+            </li>{" "}
+            <li className='bg-gray-200 dark:bg-gray-900/80 py-1 px-1.5'>
               Monitoring & Observability using Loki, Prometheus, Grafana, Node
               Exportor
+            </li>
+            <li className='bg-gray-200 dark:bg-gray-900/80 py-1 px-1.5'>
+              Monitoring & Observability using ELK stack{" "}
             </li>{" "}
-            <span className='font-bold'> | </span>
-            <li>Monitoring & Observability using ELK stack </li>{" "}
-            <span className='font-bold'> | </span>
-            <li>Security - Snort IDS, Security Onion </li>{" "}
-            <span className='font-bold'> | </span>
-            <li>FinOps </li> <span className='font-bold'> | </span>
+            <li className='bg-gray-200 dark:bg-gray-900/80 py-1 px-1.5'>
+              Security - Snort IDS, Security Onion{" "}
+            </li>{" "}
+            <li className='bg-gray-200 dark:bg-gray-900/80 py-1 px-1.5'>
+              FinOps{" "}
+            </li>
           </ul>
         </motion.div>
       </div>

@@ -1,6 +1,7 @@
 [
   {
     "projectName": "LingoGo",
+    "slug": "linggo",
     "imgName": "lingoGo.png",
     "description": "A LLM application to translate given input to specified language. This is the V1 of building a RAG Chatbot using Langchain.",
     "stack": ["Next.JS", "Langchain", "TailwindCSS", "Perplexity"],
@@ -20,10 +21,12 @@
     ],
     "status": "Completed - V1",
     "repo": "https://github.com/pradeept/chat-bot",
-    "url": "https://lingogo-langchain-perplexity.netlify.app/"
+    "url": "https://lingogo-langchain-perplexity.netlify.app/",
+    "type": "web"
   },
   {
     "projectName": "Featherlogs",
+    "slug": "featherlogs",
     "imgName": "featherlogs.png",
     "description": "A modern Fullstack Blog Application. This app provides seamless authentication, dynamic SEO and rich UX with beautiful animations.",
     "stack": [
@@ -51,10 +54,12 @@
     ],
     "status": "Completed",
     "repo": "https://github.com/pradeept/featherlogs",
-    "url": "https://featherlogs.vercel.app/"
+    "url": "https://featherlogs.vercel.app/",
+    "type": "web"
   },
   {
     "projectName": "Edditor",
+    "slug": "edditor",
     "imgName": "edditor.png",
     "description": "Edditor is a rich text editor featuring Google OAuth login, Google Drive integration, and local document downloads for a seamless, secure, and user-friendly writing experience.",
     "stack": [
@@ -66,17 +71,186 @@
       "TailwindCSS"
     ],
     "learnings": [
-      "Implementing Passport for handling authentication.",
-      "Google Drive APIs.",
-      "Integrating Google Oauth and much more.."
+      "Implementing Quill library for text editor functionality",
+      "Oauth Using Passport and express-session",
+      "Integrating Google Oauth ",
+      "Google Drive operations and much more.."
     ],
     "challengesFaced": [
-      "",
-      "Implenting middleware",
-      "Handling User, Admin and Visitor modes"
+      "Integrating Google Oauth with Drive API",
+      "Setting up Oauth in Google console",
+      "Downloading the docx locally",
+      "Handling authentication edge cases with Google OAuth",
+      "Listing files in the drive"
     ],
     "status": "Completed",
-    "repo": "https://github.com/pradeept/featherlogs",
-    "url": "https://featherlogs.vercel.app/"
+    "repo": "https://github.com/pradeept/edditor",
+    "url": "https://www.youtube.com/watch?v=_uJ5K92zylA",
+    "type": "web"
+  },
+  {
+    "projectName": "Trello Clone",
+    "slug": "trello-clone",
+    "imgName": "trelloClone.png",
+    "description": "Users can create, edit, sort, and organize entries with drag-and-drop, pagination, and AI-generated summaries, all within a clean and intuitive user interface.",
+    "stack": [
+      "Next.JS",
+      "React.JS (TS)",
+      "Zustand",
+      "Appwrite",
+      "TailwindCSS",
+      "DnD",
+      "OpenAI API"
+    ],
+    "learnings": [
+      "Using the App Router and building APIs in Next.js 13",
+      "Integrating Appwrite as a database",
+      "Implementing drag-and-drop functionality using the DnD library",
+      "Summarizing the feed using the OpenAI API"
+    ],
+    "challengesFaced": [
+      "Overcoming the learning curve of Next.js",
+      "Performing CRUD operations using the Appwrite SDK",
+      "Implementing a new state management library - Zustand",
+      "Debugging UI issues while implementing drag-and-drop functionality"
+    ],
+    "status": "Completed",
+    "repo": "https://github.com/pradeept/Trello-clone",
+    "url": "https://trello-clone-pradeept.netlify.app/",
+    "type": "web"
+  },
+  {
+    "projectName": "Loan Calculator",
+    "slug": "loan-calculator",
+    "imgName": "emiCalculator.png",
+    "description": "React app to Calculate Monthly EMI, View Amortization Schedule and View Live Currency Exchange Rates.",
+    "stack": ["React.JS (TS)", "MUI", "Context API", "Exchange Rate"],
+    "learnings": [
+      "Implementing MUI components for a responsive UI",
+      "Integrating Google OAuth for secure authentication",
+      "Managing global state using React Context API",
+      "Creating an amortization schedule dynamically"
+    ],
+    "challengesFaced": [
+      "Rate conversion of Monthly EMIs to different currencies",
+      "Meeting a tight project deadline",
+      "Ensuring accurate EMI and interest calculations",
+      "Integrating third-party APIs for exchange rates"
+    ],
+    "status": "Completed",
+    "repo": "https://github.com/pradeept/Loan-Calculator",
+    "url": "https://loan-calculator-exchange-rate.netlify.app/",
+    "type": "web"
+  },
+  {
+    "projectName": "Expense Manager",
+    "slug": "expense-manager",
+    "imgName": "expenseMgr.png",
+    "description": "A modern Expense Manager Web application to store, list, sort and search the expense record from a JSON Database.",
+    "stack": [
+      "React.JS (TS)",
+      "TailwindCSS",
+      "Redux ",
+      "Paginate",
+      "framer-motion"
+    ],
+    "learnings": [
+      "Implementing a Redux store",
+      "Adding sorting and searching functionality for entries",
+      "Implementing pagination for long lists of entries",
+      "Designing the entire app using Figma"
+    ],
+    "challengesFaced": [
+      "Implementing a UI table",
+      "Adding an editing modal with updated timestamps",
+      "Implementing pagination"
+    ],
+    "status": "Completed",
+    "repo": "https://github.com/pradeept/Expense-Manager",
+    "url": "https://expense-manager-hosted.netlify.app",
+    "type": "web"
+  },
+
+  {
+    "projectName": "Provisioner-CLI",
+    "slug": "provisioner-cli",
+    "imgName": "provisionercli.png",
+    "description": "Provisioner is a intriguing CLI app built using Node.js to automate provisioning a personalized remote R servers for programmers.",
+    "stack": ["Node.js", "Chalk", "", "SSH2", "Figlet"],
+    "learnings": [
+      "Building CLI apps using Node.js",
+      "Implementing SSH2 for calling SSH commands on a remote host",
+      "R server for individual users"
+    ],
+    "challengesFaced": [
+      "Debugging SSH2 related network issues",
+      "Configuring remote host",
+      "Making the CLI programmar friendly"
+    ],
+    "status": "Completed",
+    "repo": "https://github.com/pradeept/Provisioner-CLI-APP",
+    "type": "devops"
+  },
+  {
+    "projectName": "Infisical Deployment",
+    "slug": "infisical-deployment",
+    "imgName": "infisical.png",
+    "description": "Deployment & Configuration of Infisical (Hashicorp vault alternative) using Terraform, Ansible and Shell script.",
+    "stack": ["Terraform", "AWS", "Hetzner", "Digital Ocean", "Ansible"],
+    "learnings": [
+      "Automating Deployment Workflows with Infrastructure as Code (IaC)",
+      "Implementing Configuration Management with Ansible",
+      ""
+    ],
+    "challengesFaced": [
+      "Managing Multi-Service Deployment Dependencies",
+      "Complexity in Secure(https) and Hardened Deployment(generating keys) Setup",
+      "Automating Domain mapping "
+    ],
+    "status": "Completed",
+    "repo": "https://github.com/pradeept/Infisical",
+    "type": "devops"
+  },
+  {
+    "projectName": "Nextcloud",
+    "slug": "nextcloud-deployment",
+    "imgName": "nextcloud.png",
+    "description": "Deployment & Configuration of Nextcloud using Terraform, Ansible and Shell script.",
+    "stack": ["Terraform", "Digital Ocean", "Ansible"],
+    "learnings": [
+      "Automating Deployment Workflows with Infrastructure as Code (IaC)",
+      "Implementing Configuration Management with Ansible",
+      "Automating Domain mapping "
+    ],
+    "challengesFaced": [
+      "Managing Multi-Service Deployment Dependencies",
+      "Complexity in Secure(https) and Hardened Deployment(generating keys) Setup",
+      "Setting up Backup for nextcloud (for all users)",
+      "Documenting deployment and user manual"
+    ],
+    "status": "Completed",
+    "repo": "https://github.com/pradeept/Nextcloud",
+    "type": "devops"
+  },
+  {
+    "projectName": "NullNet",
+    "slug": "nullnet",
+    "imgName": "nullnet.png",
+    "description": "Nullnet is an Android application built using Java and XML. The app allows users to discover one another, chat, and transfer files and images without an internet connection. It is useful in areas with restricted internet access or those affected by natural disasters.",
+    "stack": ["Java", "XML", "Android Studio"],
+    "learnings": [
+      "UI development in Android",
+      "Android services & familiarizing with Android-Studio",
+      "Working and implementation of Wifi-P2P technology through code",
+      "Real-time message transfer and file transfer over wireless connection"
+    ],
+    "challengesFaced": [
+      "Meeting tight project deadline from the University",
+      "Supporting multiple Android versions",
+      "Implementing Image and File Transer"
+    ],
+    "status": "Completed",
+    "repo": "https://github.com/pradeept/nullnet",
+    "type": "mobile"
   }
 ]
