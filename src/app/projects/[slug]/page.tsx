@@ -31,13 +31,10 @@ const images: Record<string, StaticImageData> = {
 export default async function ProjectDetailPage({
   params,
 }: {
-  params: { slug: string };
+  params: Promise<{ slug: string }>;
 }) {
-  // Find project by slug (case-insensitive, spaces and special chars removed)
   const normalize = (str: string) => str.toLowerCase();
-  // If params.slug is a Promise (dynamic segment), await it
-  const slug =
-    typeof params.slug === "string" ? params.slug : await params.slug;
+  const { slug } = await params;
   const project = projectsData.find(
     (p) => normalize(p.slug) === normalize(slug)
   );
