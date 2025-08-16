@@ -36,7 +36,7 @@ export default function Home() {
                 rectangleClassName='bg-neutral-200 dark:bg-neutral-700 border-neutral-300 dark:border-neutral-600'
                 pointerClassName='text-yellow-500'
               >
-                <p className='relative z-10  text-3xl md:text-4xl px-2 text-yellow-300 whitespace-nowrap'>
+                <p className='relative z-10  text-3xl md:text-4xl px-2 dark:text-yellow-300 text-yellow-600 whitespace-nowrap'>
                   PRADEEP TARAKAR
                 </p>
               </PointerHighlight>
