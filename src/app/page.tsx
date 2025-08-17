@@ -30,13 +30,13 @@ export default function Home() {
               <span>Hey There</span>
               <span>,</span>
             </h1>
-            <div className='flex flex-col gap-2 md:pl-2 pl-0'>
+            <div className='flex flex-col gap-2 md:pl-2 pl-0 justify-center items-center '>
               <span className='text-lg'>I&apos;m</span>
               <PointerHighlight
                 rectangleClassName='bg-neutral-200 dark:bg-neutral-700 border-neutral-300 dark:border-neutral-600'
                 pointerClassName='text-yellow-500'
               >
-                <p className='relative z-10  text-3xl md:text-4xl px-2 dark:text-yellow-300 text-yellow-600 whitespace-nowrap'>
+                <p className='relative z-10 text-3xl md:text-4xl px-2 dark:text-yellow-300 text-yellow-600 whitespace-nowrap'>
                   PRADEEP TARAKAR
                 </p>
               </PointerHighlight>
