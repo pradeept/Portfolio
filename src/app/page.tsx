@@ -45,7 +45,7 @@ export default function Home() {
               </p>
               <div className='flex items-center cursor-pointer justify-center'>
                 <a
-                  href='mailto:someemail@gmail.com?subject=Work Inquiry'
+                  href='mailto:pradeep.tarakar17@gmail.com?subject=Work Inquiry'
                   rel='noopener noreferrer'
                   className='mt-4 cursor-pointer w-fit bg-gradient-to-br from-blue-400/60 to-blue-600/60 dark:from-blue-900/40 dark:to-blue-700/40 backdrop-blur-sm rounded-xl  border px-2 py-0.5 border-blue-200 dark:border-blue-800 text-base md:text-md font-semibold text-blue-900 dark:text-blue-200 hover:scale-105 hover:shadow-2xl transition-all duration-200 flex items-center gap-2'
                 >
