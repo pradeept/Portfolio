@@ -13,7 +13,7 @@ import infisical from "../../../../public/projects/infisical.png";
 import nextcloud from "../../../../public/projects/nextcloud.png";
 import provisionercli from "../../../../public/projects/provisionercli.png";
 import nullnet from "../../../../public/projects/nullnet.png";
-import Back from "@/components/Back";
+// import Back from "@/components/Back";
 
 const images: Record<string, StaticImageData> = {
   "lingoGo.png": lingoGo,
