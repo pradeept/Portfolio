@@ -1,12 +1,6 @@
-/**
- * Note: Use position fixed according to your needs
- * Desktop navbar is better positioned at the bottom
- * Mobile navbar is better positioned at bottom right.
- **/
 "use client";
 import { cn } from "@/lib/utils";
 import {
-  IconLayoutNavbarCollapse,
   IconMoon,
   IconSun,
 } from "@tabler/icons-react";
@@ -21,6 +15,7 @@ import {
 } from "motion/react";
 
 import { useEffect, useRef, useState } from "react";
+import Link from "next/link";
 
 export const FloatingDock = ({
   items,
@@ -39,7 +34,7 @@ export const FloatingDock = ({
   );
 };
 
-// Mobile Dock (vertical)
+// Without hover effect - custom
 const FloatingDockMobile = ({
   items,
   className,
@@ -47,7 +42,6 @@ const FloatingDockMobile = ({
   items: { title: string; icon: React.ReactNode; href: string }[];
   className?: string;
 }) => {
-  const [open, setOpen] = useState(false);
   const [mounted, setMounted] = useState<boolean>(false);
   const { theme, setTheme } = useTheme();
   useEffect(() => {
@@ -55,61 +49,28 @@ const FloatingDockMobile = ({
   }, []);
   return (
     <div
-      className={cn(
-        "relative block md:hidden backdrop-blur-md bg-white/60 dark:bg-neutral-900/60 border border-white/30 rounded-full dark:border-neutral-800/40 shadow-lg ",
-        className
-      )}
+      className={`overflow-x-scroll max-w-screen no-scrollbar md:hidden p-2 border h-full w-full  bg-white/90 dark:bg-neutral-900/90 rounded-full border-gray-400 dark:border-neutral-800/90 ${className}`}
     >
-      <AnimatePresence>
-        {open && (
-          <motion.div
-            layoutId='nav'
-            className='absolute inset-x-0 bottom-full mb-2 flex flex-col gap-2 '
-          >
-            {items.map((item, idx) => (
-              <motion.div
-                key={item.title}
-                initial={{ opacity: 0, y: 10 }}
-                animate={{
-                  opacity: 1,
-                  y: 0,
-                }}
-                exit={{
-                  opacity: 0,
-                  y: 10,
-                  transition: {
-                    delay: idx * 0.05,
-                  },
-                }}
-                transition={{ delay: (items.length - 1 - idx) * 0.05 }}
-              >
-                <a
-                  href={item.href}
-                  key={item.title}
-                  className='flex h-10 w-10 items-center justify-center rounded-full bg-gray-200 dark:bg-neutral-900'
-                >
-                  <div className='h-6 w-6'>{item.icon}</div>
-                </a>
-              </motion.div>
-            ))}
-            {/* Separator and Theme Toggle */}
-            <div className='flex items-center mt-2'>
-              <button
-                onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
-                className='flex items-center justify-center rounded-full bg-gray-200 dark:bg-neutral-900 h-10 w-10'
-              >
-                {mounted && theme === "dark" ? <IconSun /> : <IconMoon />}
-              </button>
-            </div>
-          </motion.div>
-        )}
-      </AnimatePresence>
-      <button
-        onClick={() => setOpen(!open)}
-        className='flex h-10 w-10 items-center justify-center rounded-full bg-gray-200 dark:bg-neutral-800'
-      >
-        <IconLayoutNavbarCollapse className='h-8 w-8 text-neutral-500 dark:text-neutral-400' />
-      </button>
+      <div className='flex gap-2'>
+        {items.map((item, idx) => {
+          return (
+            <Link
+              id='link'
+              key={idx}
+              href={item.href}
+              className=' min-h-9 min-w-9 rounded-full p-1  bg-gray-300 dark:bg-neutral-800 transition-all '
+            >
+              {item.icon}
+            </Link>
+          );
+        })}
+        <button
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          className='flex min-h-9 min-w-9 items-center justify-center rounded-full bg-gray-300 dark:bg-neutral-800 ml-2 cursor-pointer'
+        >
+          {mounted && theme === "dark" ? <IconSun /> : <IconMoon />}
+        </button>
+      </div>
     </div>
   );
 };

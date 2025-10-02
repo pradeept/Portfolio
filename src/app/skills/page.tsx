@@ -54,8 +54,11 @@ function Skills() {
           whileInView={{ opacity: 1, y: 0 }}
           className='bg-gray-100 dark:bg-gray-900/40 border col-span-4 lg:col-span-2 border-neutral-200 dark:border-neutral-800 rounded-3xl shadow-xl p-6 md:p-8 flex flex-col items-center backdrop-blur-md relative'
         >
-          <small className='absolute left-4 top-2 text-gray-400'>
+          <small className='hidden md:block absolute left-4 top-2 text-gray-400'>
             (Hover Over Skill Icons)
+          </small>
+          <small className='md:hidden absolute left-4 top-2 text-gray-400'>
+            (Click on Skill Icons)
           </small>
           <h2 className='text-2xl font-bold mb-4 text-center  tracking-wide'>
             Frontend

@@ -1,15 +1,22 @@
-import React from "react";
+"use client";
+import React, { useEffect, useState } from "react";
 import quotes from "@/lib/data/quotes.json";
 import { IconQuote } from "@tabler/icons-react";
+import { Quote } from "@/types/quoteType";
 
-function getRandomQuote() {
-  if (!quotes || !Array.isArray(quotes) || quotes.length === 0) return null;
+function getRandomQuote(): Quote {
   const idx = Math.floor(Math.random() * quotes.length);
   return quotes[idx];
 }
 
 function Footer() {
-  const quote = getRandomQuote();
+  const [quote, setQuote] = useState<undefined | Quote>(undefined);
+
+  useEffect(() => {
+    const random: Quote = getRandomQuote();
+    setQuote(random);
+  }, []);
+
   return (
     <footer className='w-full flex flex-col items-center justify-center mt-12 md:pb-22 px-4'>
       <div className='w-full  flex flex-col items-center justify-center gap-6 rounded-2xl bg-white/60 dark:bg-neutral-900/60 shadow-xl backdrop-blur-lg border border-neutral-200 dark:border-neutral-800 py-6 px-4'>

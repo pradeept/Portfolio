@@ -13,7 +13,6 @@ import infisical from "../../../../public/projects/infisical.png";
 import nextcloud from "../../../../public/projects/nextcloud.png";
 import provisionercli from "../../../../public/projects/provisionercli.png";
 import nullnet from "../../../../public/projects/nullnet.png";
-// import Back from "@/components/Back";
 
 const images: Record<string, StaticImageData> = {
   "lingoGo.png": lingoGo,
@@ -42,7 +41,6 @@ export default async function ProjectDetailPage({
 
   return (
     <section className='min-h-screen flex flex-col items-center justify-center mx-10 py-12 px-4 md:px-0 '>
-      {/*<Back /> */}
       <div className='w-full max-w-4xl flex flex-col gap-10 '>
         <div className='flex flex-col md:flex-row gap-10  items-center md:items-start bg-gray-100 dark:bg-gray-900/60 rounded-2xl p-6 md:p-12 shadow-lg'>
           <Image

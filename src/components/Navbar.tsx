@@ -13,14 +13,14 @@ export default function Navbar() {
     {
       title: "Home",
       icon: (
-        <IconHome className='h-full w-full text-neutral-500 dark:text-neutral-300' />
+        <IconHome className='h-full w-full text-neutral-600 dark:text-neutral-300' />
       ),
       href: "/",
     },
     {
       title: "About",
       icon: (
-        <IconUserCircle className='h-full w-full text-neutral-500 dark:text-neutral-300' />
+        <IconUserCircle className='h-full w-full text-neutral-600 dark:text-neutral-300' />
       ),
       href: "/about",
     },
@@ -28,21 +28,21 @@ export default function Navbar() {
     {
       title: "Experience",
       icon: (
-        <IconBriefcase className='h-full w-full text-neutral-500 dark:text-neutral-300' />
+        <IconBriefcase className='h-full w-full text-neutral-600 dark:text-neutral-300' />
       ),
       href: "/experience",
     },
     {
       title: "Skills",
       icon: (
-        <IconHammer className='h-full w-full text-neutral-500 dark:text-neutral-300' />
+        <IconHammer className='h-full w-full text-neutral-600 dark:text-neutral-300' />
       ),
       href: "/skills",
     },
     {
       title: "Projects",
       icon: (
-        <IconBrandDatabricks className='h-full w-full text-neutral-500 dark:text-neutral-300' />
+        <IconBrandDatabricks className='h-full w-full text-neutral-600 dark:text-neutral-300' />
       ),
       href: "/projects",
     },
@@ -55,7 +55,7 @@ export default function Navbar() {
     // },
   ];
   return (
-    <div className='flex fixed bottom-0 md:left-0 right-0 m-4 z-50'>
+    <div className='flex fixed bottom-0 -translate-x-1/2 left-1/2  m-4 z-50'>
       <FloatingDock
         // mobileClassName=""
         // desktopClassName=""
