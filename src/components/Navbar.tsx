@@ -55,7 +55,7 @@ export default function Navbar() {
     // },
   ];
   return (
-    <div className='flex fixed bottom-0 -translate-x-1/2 left-1/2  m-4 z-50'>
+    <div className='flex fixed bottom-0 -translate-x-1/2 left-1/2  my-4 z-50'>
       <FloatingDock
         // mobileClassName=""
         // desktopClassName=""
