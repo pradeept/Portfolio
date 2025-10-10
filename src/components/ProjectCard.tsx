@@ -132,7 +132,7 @@ function ProjectCard({ data }: { data: project }) {
             <IconArrowRight />
           </span>
         </button>
-        <div className='flex justify-between items-center mt-4 gap-2'>
+        <div className='flex justify-evenly items-center mt-4 gap-2 flex-wrap'>
           <span
             className={`flex items-center gap-2 px-3 py-1 rounded-full text-xs font-semibold shadow-sm border transition-all duration-300
               ${

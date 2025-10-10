@@ -3,7 +3,7 @@
     "projectName": "LingoGo",
     "slug": "linggo",
     "imgName": "lingoGo.png",
-    "description": "A LLM application to translate given input to specified language. This is the V1 of building a RAG Chatbot using Langchain.",
+    "description": "A modern All-in-One LLM powered translator web app. Powered by Next, Langchain and Perplexity API.",
     "stack": ["Next.JS", "Langchain", "TailwindCSS", "Perplexity"],
     "learnings": [
       "Langchain basics",
@@ -19,7 +19,7 @@
       "Ensuring UI responsiveness during long requests",
       "Debugging edge cases in language translation"
     ],
-    "status": "Completed - V1",
+    "status": "Completed",
     "repo": "https://github.com/pradeept/chat-bot",
     "url": "https://lingogo-langchain-perplexity.netlify.app/",
     "type": "web"
@@ -28,7 +28,7 @@
     "projectName": "Featherlogs",
     "slug": "featherlogs",
     "imgName": "featherlogs.png",
-    "description": "A modern Fullstack Blog Application. This app provides seamless authentication, dynamic SEO and rich UX with beautiful animations.",
+    "description": "A modern fullstack Blog Application with seamless authentication and rich UX with beautiful animations.",
     "stack": [
       "Next.JS",
       "Typescript",
@@ -140,34 +140,6 @@
     "status": "Completed",
     "repo": "https://github.com/pradeept/Loan-Calculator",
     "url": "https://loan-calculator-exchange-rate.netlify.app/",
-    "type": "web"
-  },
-  {
-    "projectName": "Expense Manager",
-    "slug": "expense-manager",
-    "imgName": "expenseMgr.png",
-    "description": "A modern Expense Manager Web application to store, list, sort and search the expense record from a JSON Database.",
-    "stack": [
-      "React.JS (TS)",
-      "TailwindCSS",
-      "Redux ",
-      "Paginate",
-      "framer-motion"
-    ],
-    "learnings": [
-      "Implementing a Redux store",
-      "Adding sorting and searching functionality for entries",
-      "Implementing pagination for long lists of entries",
-      "Designing the entire app using Figma"
-    ],
-    "challengesFaced": [
-      "Implementing a UI table",
-      "Adding an editing modal with updated timestamps",
-      "Implementing pagination"
-    ],
-    "status": "Completed",
-    "repo": "https://github.com/pradeept/Expense-Manager",
-    "url": "https://expense-manager-hosted.netlify.app",
     "type": "web"
   },
 

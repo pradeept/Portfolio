@@ -46,19 +46,10 @@ export default function Navbar() {
       ),
       href: "/projects",
     },
-    // {
-    //   title: "Contact",
-    //   icon: (
-    //     <IconAddressBook className='h-full w-full text-neutral-500 dark:text-neutral-300' />
-    //   ),
-    //   href: "/contact",
-    // },
   ];
   return (
     <div className='flex fixed bottom-0 -translate-x-1/2 left-1/2  my-4 z-50'>
       <FloatingDock
-        // mobileClassName=""
-        // desktopClassName=""
         items={links}
       />
     </div>

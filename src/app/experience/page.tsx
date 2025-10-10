@@ -13,7 +13,7 @@ function Experience() {
               DevOps Engineer
             </h1>
             <a
-              className='text-md md:text-xl dark:text-blue-200 text-blue-800 hover:underline'
+              className='text-sm md:text-md dark:text-blue-200 text-blue-800 hover:underline'
               href='https://sirpi.io'
               target='_blank'
             >
@@ -21,37 +21,48 @@ function Experience() {
             </a>
           </div>
 
-          <ul className='flex flex-col gap-2 mt-4'>
+          <ul className='flex flex-col gap-2 md:gap-3 dark:text-gray-200 text-sm mt-4'>
             <li>
-              - Planned and Redistributed Dyno Load in Heroku Which{" "}
-              <b>Reduced 30% of the Total Cost</b>.
-            </li>
-            <li>
-              - Setup Observability & Monitoring Using{" "}
-              <b>LAMP for 15+ servers, 20+ Deployments</b> Across Different
-              Cloud Providers.
-            </li>
-            <li>
-              - Deployed Full-Stack Applications on Kubernetes using{" "}
-              <b>Helm charts</b>.
-            </li>
-            <li>
-              - Handled <b>In-House & Cloud Based Kubernetes</b> Clusters and
-              It&apos;s Components.
-            </li>
-            <li>
-              - Written <b>Terraform and Ansible scripts</b> to Provision and
-              Configure Infrastructure (IaC).
-            </li>
-            <li>
-              - Improved Organization Security by Implementing{" "}
-              <b>
-                Access Tracking, Least Privilege and Security Best Practices
-              </b>
+              - Planned and redistributed the Dyno load in Heroku which{" "}
+              <span className='dark:text-orange-300 text-orange-400'>
+                reduced 30% of the total cost
+              </span>
               .
             </li>
             <li>
-              <b>- Led the Team</b> of 4 members.{" "}
+              - Setup Observability & Monitoring{" "}
+              <span className='dark:text-orange-300 text-orange-400'>
+                for 15+ servers and 20+ Deployments
+              </span>{" "}
+              across multiple cloud providers.
+            </li>
+            <li>
+              - Administered{" "}
+              <span className='dark:text-orange-300 text-orange-400'>
+                On-prem & Cloud based Kubernetes clusters
+              </span>{" "}
+              .
+            </li>
+            <li>
+              - Developed{" "}
+              <span className='dark:text-orange-300 text-orange-400'>
+                Terraform and Ansible scripts (IaC)
+              </span>{" "}
+              to setup and configure Infrastructure.
+            </li>
+            <li>
+              - Improved organization security by implementing{" "}
+              <span className='dark:text-orange-300 text-orange-400'>
+                Access Tracking, Least Privilege and Security Best Practices
+              </span>
+              .
+            </li>
+            <li>
+              -{" "}
+              <span className='dark:text-orange-300 text-orange-400'>
+                Led the DevOps team
+              </span>{" "}
+              of 3 members.{" "}
             </li>
           </ul>
         </div>
@@ -66,7 +77,7 @@ function Experience() {
               DevOps Intern
             </h1>
             <a
-              className='text-md md:text-xl dark:text-blue-200 text-blue-800 hover:underline'
+              className='text-sm md:text-md dark:text-blue-200 text-blue-800 hover:underline'
               href='https://sirpi.io'
               target='_blank'
             >
@@ -74,34 +85,41 @@ function Experience() {
             </a>
           </div>
 
-          <ul className='flex flex-col gap-2 mt-4'>
+          <ul className='flex flex-col gap-2 md:gap-3 dark:text-gray-200 text-sm mt-4'>
             <li>
-              - Self Hosted 10+ Open Source Services like{" "}
-              <b>NextCloud, Infisical, Supabase, etc</b>.
+              - Self Hosted 10+ Open Source Services which included{" "}
+              <span className='dark:text-orange-300 text-orange-400'>
+                NextCloud, Infisical, Supabase,
+              </span>{" "}
+              and more.
             </li>
             <li>
-              - Improved Physical Network Security by Setting up{" "}
-              <b>DMZ, VLAN, Switch and Snort IDS</b>.
-            </li>
-            <li>
-              - Helped in Setting Up an <b>In-House Kubernetes Cluster</b>.
-            </li>
-            <li>
-              - Setup a <b>GPU Server from Scratch</b> for RAG Based Application
-              Deployments.
-            </li>
-            <li>
-              - Setup In-house RAG application - <b>Private GPT</b>
-            </li>
-            <li>
-              - Written Scripts to{" "}
-              <b>Perform Load-Test on Kubernetes Clusters</b>.
-            </li>
-            <li>
-              - Helped in Writing <b>Kubernetes Manifests for Micro Services</b>
+              - Improved organization Network by setting up{" "}
+              <span className='dark:text-orange-300 text-orange-400'>
+                DMZ, VLAN, Switch and Snort IDS
+              </span>
               .
             </li>
-            <li>- Handled FinOps and Assets Movement.</li>
+            <li>
+              - Setup a{" "}
+              <span className='dark:text-orange-300 text-orange-400'>
+                GPU Server from Scratch
+              </span>{" "}
+              and hosted an{" "}
+              <span className='dark:text-orange-300 text-orange-400'>
+                {" "}
+                on-premises RAG application (PrivateGPT)
+              </span>
+            </li>
+
+            <li>
+              - Written test scripts to perform{" "}
+              <span className='dark:text-orange-300 text-orange-400'>
+                Load-Test on K8s Clusters
+              </span>
+              .
+            </li>
+            <li>- Handled FinOps and assets movement.</li>
           </ul>
         </div>
       ),
@@ -115,7 +133,7 @@ function Experience() {
               Frontend Engineer
             </h1>
             <a
-              className='text-md md:text-xl dark:text-blue-200 text-blue-800 hover:underline'
+              className='text-sm md:text-md dark:text-blue-200 text-blue-800 hover:underline'
               href='https://sirpi.io'
               target='_blank'
             >
@@ -123,22 +141,28 @@ function Experience() {
             </a>
           </div>
 
-          <ul className='flex flex-col gap-2 mt-4'>
+          <ul className='flex flex-col gap-2 md:gap-3 dark:text-gray-200 text-sm mt-4'>
             <li>
-              - Worked on <b>SaaS Applications</b>.
+              - Worked on developing{" "}
+              <span className='dark:text-orange-300 text-orange-400'>
+                SaaS Applications
+              </span>
+              .
             </li>
             <li>
-              - Contributed in Documenting and Implementing{" "}
-              <b>coding standards</b>.
+              - Contributed to documenting and adopting{" "}
+              <span className='dark:text-orange-300 text-orange-400'>
+                frontend coding standards
+              </span>
+              .
             </li>
+            <li>- Created POCs using NextJS. </li>
             <li>
-              - Refined Multiple <b>Figma Designs</b> with Modern Design
-              Language.
-            </li>
-            <li>- Created POCs using NextJS and Angular. </li>
-            <li>
-              - Optimized Rendering Large Data by Implementing{" "}
-              <b>Infinite Scrolling</b>.
+              - Optimized large data rendering implementing{" "}
+              <span className='dark:text-orange-300 text-orange-400'>
+                an Infinite Scroll feature
+              </span>
+              .
             </li>
           </ul>
         </div>
@@ -154,11 +178,11 @@ function Experience() {
       content: (
         <div>
           <div className='flex flex-col gap-2'>
-            <h1 className='text-xl md:text-4xl dark:text-yellow-300 text-yellow-700'>
+            <h1 className='text-xl md:text-3xl dark:text-yellow-300 text-yellow-700'>
               Master of Computer Applications
             </h1>
 
-            <p className='text-md md:text-xl dark:text-blue-200 text-blue-800 hover:underline'>
+            <p className='text-md md:text-lg dark:text-blue-200 text-blue-800 hover:underline'>
               Dayanand Sagar College of Engineering, KS Layout, Bangalore
             </p>
           </div>
@@ -171,11 +195,11 @@ function Experience() {
       content: (
         <div>
           <div className='flex flex-col gap-2'>
-            <h1 className='text-xl md:text-4xl dark:text-yellow-300 text-yellow-700'>
-              BCA
+            <h1 className='text-xl md:text-3xl dark:text-yellow-300 text-yellow-700'>
+              Bachelor of Computer Applications
             </h1>
 
-            <p className='text-md md:text-xl dark:text-blue-200 text-blue-800 hover:underline'>
+            <p className='text-md md:text-lg dark:text-blue-200 text-blue-800 hover:underline'>
               Basaveshwar Science College, Bagalkot
             </p>
           </div>
@@ -184,7 +208,7 @@ function Experience() {
     },
   ];
   return (
-    <div className='flex flex-col justify-center items-center w-full'>
+    <div className='flex flex-col justify-center items-center md:mx-28 mx-mdplus'>
       <ShootingStars />
       <div className=' text-left'>
         <motion.div

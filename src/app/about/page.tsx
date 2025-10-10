@@ -3,7 +3,6 @@ import {
   IconBrandHackerrank,
   IconBrandLeetcode,
   IconBrandLinkedin,
-  IconBrandMedium,
 } from "@tabler/icons-react";
 import React from "react";
 import * as motion from "motion/react-client";
@@ -12,7 +11,7 @@ import profile from "../../../public/profile_pic_gibly.png";
 import { PointerHighlight } from "@/components/acerternity-ui/PointerHighlight";
 function About() {
   return (
-    <div className='w-full min-h-screen z-20  dark:bg-gray-900/80 mb-7 md:mb-10 bg-gray-100 '>
+    <div className='min-h-screen z-20  dark:bg-gray-900/80 mb-7 md:mb-10 bg-gray-100 mx-mdplus'>
       <div className='flex justify-center items-center '>
         <motion.div
           initial={{ x: -40, opacity: 0 }}
@@ -23,7 +22,7 @@ function About() {
           About Me
         </motion.div>
       </div>
-      <div className='p-10 md:px-30 md:py-24 grid grid-cols-1 md:grid-cols-2 gap-8'>
+      <div className='p-10 md:px-30 md:py-24 grid grid-cols-1 lg:grid-cols-2 gap-8'>
         <div className='flex flex-col justify-center items-center gap-4 md:gap-10'>
           <div>
             <PointerHighlight
@@ -47,13 +46,13 @@ function About() {
           <div className='flex gap-8 md:gap-16'>
             <div className='flex gap-2'>
               <a href='https://www.leetcode.com/u/Pradeept17' target='_blank'>
-                <IconBrandLeetcode size={44} />
+                <IconBrandLeetcode size={44} className='dark:text-yellow-300 text-yellow-600' />
               </a>
               <a
                 href='https://www.hackerrank.com/profile/pradeep_tarakar'
                 target='_blank'
               >
-                <IconBrandHackerrank size={44} />
+                <IconBrandHackerrank size={44} className='dark:text-green-300 text-green-600' />
               </a>
             </div>
             <div>
@@ -65,10 +64,10 @@ function About() {
                   href='https://www.linkedin.com/in/pradeep-tarakar'
                   target='_blank'
                 >
-                  <IconBrandLinkedin size={44} />
-                </a>
-                <a href='https://medium.com/@pradeep.tarakar17' target='_blank'>
-                  <IconBrandMedium size={44} />
+                  <IconBrandLinkedin
+                    size={44}
+                    className='dark:text-blue-300 text-blue-600 rounded'
+                  />
                 </a>
               </div>
             </div>

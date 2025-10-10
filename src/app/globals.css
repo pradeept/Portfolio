@@ -81,7 +81,16 @@ html {
   --color-sidebar-border: var(--sidebar-border);
 
   --color-sidebar-ring: var(--sidebar-ring);
+
+
 }
+
+@media (min-width: 767px) and (max-width: 983px) {
+  .mx-mdplus {
+    margin-left: 3rem !important;
+    margin-right: 3rem !important;
+  }
+} 
 
 :root {
   --radius: 0.625rem;
