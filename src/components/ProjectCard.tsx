@@ -14,6 +14,7 @@ import infisical from "../../public/projects/infisical.png";
 import nextcloud from "../../public/projects/nextcloud.png";
 import provisionercli from "../../public/projects/provisionercli.png";
 import nullnet from "../../public/projects/nullnet.png";
+import ragloma from "../../public/projects/RAGloma.png"
 
 import {
   IconArrowRight,
@@ -23,6 +24,7 @@ import {
 import { usePathname, useRouter } from "next/navigation";
 const images: Record<string, StaticImageData> = {
   "project1.png": project1,
+  "RAGloma.png": ragloma,
   "lingoGo.png": lingoGo,
   "featherlogs.png": featherLogs,
   "edditor.png": edditor,

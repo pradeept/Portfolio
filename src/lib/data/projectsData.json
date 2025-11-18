@@ -1,5 +1,36 @@
 [
   {
+    "projectName": "RAGloma",
+    "slug": "ragloma",
+    "imgName": "RAGloma.png",
+    "description": "A modern fullstack app for chatting with LLMs, documents, or a web links.",
+    "stack": [
+      "Next.JS",
+      "Langchain",
+      "Perplexity API",
+      "Ollama",
+      "Pinecone",
+      "Upstash (Redis)"
+    ],
+    "learnings": [
+      "Components of a RAG system",
+      "Integrating Ollama for using local llms",
+      "Rate limiting & different algos of rate limiting",
+      "Optimizing API response time"
+    ],
+    "challengesFaced": [
+      "Streaming the response from API to client",
+      "Integrating SSE with Langchain Streaming functionality",
+      "Managing rate limits and API errors",
+      "Ensuring UI responsiveness during long requests",
+      "Debugging edge cases in language translation"
+    ],
+    "status": "Completed",
+    "repo": "https://github.com/pradeept/chat-bot",
+    "url": "https://lingogo-langchain-perplexity.netlify.app/",
+    "type": "web"
+  },
+  {
     "projectName": "LingoGo",
     "slug": "linggo",
     "imgName": "lingoGo.png",
@@ -117,29 +148,6 @@
     "status": "Completed",
     "repo": "https://github.com/pradeept/Trello-clone",
     "url": "https://trello-clone-pradeept.netlify.app/",
-    "type": "web"
-  },
-  {
-    "projectName": "Loan Calculator",
-    "slug": "loan-calculator",
-    "imgName": "emiCalculator.png",
-    "description": "React app to Calculate Monthly EMI, View Amortization Schedule and View Live Currency Exchange Rates.",
-    "stack": ["React.JS (TS)", "MUI", "Context API", "Exchange Rate"],
-    "learnings": [
-      "Implementing MUI components for a responsive UI",
-      "Integrating Google OAuth for secure authentication",
-      "Managing global state using React Context API",
-      "Creating an amortization schedule dynamically"
-    ],
-    "challengesFaced": [
-      "Rate conversion of Monthly EMIs to different currencies",
-      "Meeting a tight project deadline",
-      "Ensuring accurate EMI and interest calculations",
-      "Integrating third-party APIs for exchange rates"
-    ],
-    "status": "Completed",
-    "repo": "https://github.com/pradeept/Loan-Calculator",
-    "url": "https://loan-calculator-exchange-rate.netlify.app/",
     "type": "web"
   },
 

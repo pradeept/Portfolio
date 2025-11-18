@@ -30,14 +30,14 @@ function About() {
               pointerClassName='text-blue-500'
             >
               <h1 className='p-2 font-light tracking-wider text-lg z-10'>
-                I&apos;m a Software Engineer specializing in building modern,
-                scalable applications using React, Next.js, Express.js and
-                Node.js. With a strong eye for design and performance.
-                Complementing my Frontend and Backend expertise, I bring DevOps
+                I&apos;m a <span className="dark:text-red-400 text-red-500">Fullstack Developer</span> specializing in building modern,
+                scalable applications using <span className="dark:text-yellow-400 text-yellow-500">Next.js, Express.js and
+                Node.js.</span> With a strong eye for design and performance.
+                Complementing my Frontend and Backend expertise, I bring <span className="dark:text-orange-400 text-orange-500">DevOps
                 skills to the table — managing deployments with Kubernetes,
-                writing IaC, and setting up observability and CI/CD pipelines.
-                I&apos;m also enthusiast about Network and Web Application
-                Security. This blend allows me to deliver full-cycle solutions
+                writing IaC, and setting up observability and CI/CD pipelines. </span>
+                I&apos;m also enthusiast about Network and <span className="dark:text-indigo-400 text-indigo-500">Web Application
+                Security.</span> This blend allows me to deliver full-cycle solutions
                 from code to production with efficiency and reliability.
               </h1>
             </PointerHighlight>
