@@ -14,7 +14,7 @@ export default function Home() {
   return (
     <>
       <section className='flex justify-center' id='hero'>
-        <div className='min-h-screen flex items-center justify-center md:mx-10 my-6 md:my-0 max-w-6xl border'>
+        <div className='min-h-screen flex items-center justify-center md:mx-10 my-6 md:my-0 max-w-6xl'>
           <ShootingStars maxDelay={2} /> {/* Background */}
           <div className='flex flex-col justify-evenly items-center w-full rounded  '>
             {/* Apple hi emoji */}

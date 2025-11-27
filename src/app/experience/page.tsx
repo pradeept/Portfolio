@@ -2,8 +2,38 @@ import { Timeline } from "@/components/acerternity-ui/Timeline";
 import React from "react";
 import * as motion from "motion/react-client";
 import { ShootingStars } from "@/components/acerternity-ui/ShootingStars";
+import Education from "@/components/Education";
+
 function Experience() {
   const data = [
+    {
+      title: "March 2025 - Present",
+      content: (
+        <div>
+          <div className='flex flex-col gap-2'>
+            <h1 className='text-xl md:text-4xl dark:text-yellow-300 text-yellow-700'>
+              Freelancer and Tutor
+            </h1>
+            <a className='text-sm md:text-md dark:text-blue-200 text-blue-800 hover:underline'>
+              Self-Employed
+            </a>
+          </div>
+          <ul className='flex flex-col gap-2 md:gap-3 dark:text-gray-200 text-sm mt-4'>
+            <li>- Delivered and deployed web applications for 3 clients.</li>
+            <li>- Conducted 10+ tutoring sessions on Preply.</li>
+            <li>
+              - Actively expanding my skill set in modern technologies,
+              including{" "}
+              <span className='dark:text-orange-300 text-orange-400'>
+                LangChain, PostgreSQL, backend design principles, architectural
+                patterns, and DSA
+              </span>
+              .
+            </li>
+          </ul>
+        </div>
+      ),
+    },
     {
       title: "May 2024 - Dec 2024",
       content: (
@@ -170,43 +200,6 @@ function Experience() {
     },
   ];
 
-  // Education
-  const eduData = [
-    {
-      title: "Dec 2021 - Sep 2023",
-
-      content: (
-        <div>
-          <div className='flex flex-col gap-2'>
-            <h1 className='text-xl md:text-3xl dark:text-yellow-300 text-yellow-700'>
-              Master of Computer Applications
-            </h1>
-
-            <p className='text-md md:text-lg dark:text-blue-200 text-blue-800 hover:underline'>
-              Dayanand Sagar College of Engineering, KS Layout, Bangalore
-            </p>
-          </div>
-        </div>
-      ),
-    },
-    {
-      title: "Jun 2018 - Sep 2021",
-
-      content: (
-        <div>
-          <div className='flex flex-col gap-2'>
-            <h1 className='text-xl md:text-3xl dark:text-yellow-300 text-yellow-700'>
-              Bachelor of Computer Applications
-            </h1>
-
-            <p className='text-md md:text-lg dark:text-blue-200 text-blue-800 hover:underline'>
-              Basaveshwar Science College, Bagalkot
-            </p>
-          </div>
-        </div>
-      ),
-    },
-  ];
   return (
     <div className='flex flex-col justify-center items-center md:mx-28 mx-mdplus'>
       <ShootingStars />
@@ -225,19 +218,7 @@ function Experience() {
       </div>
       <hr />
       {/* Education */}
-      <div className=' text-left'>
-        <motion.div
-          initial={{ x: -40, opacity: 0 }}
-          animate={{ x: 0, opacity: 1 }}
-          transition={{ duration: 0.7, type: "spring" }}
-          className='border text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-black/40 to-black dark:from-white/85 dark:to-gray-50/40'
-        >
-          Education
-        </motion.div>
-      </div>
-      <div className='w-full'>
-        <Timeline data={eduData} />
-      </div>
+      <Education />
     </div>
   );
 }
