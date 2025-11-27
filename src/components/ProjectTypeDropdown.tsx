@@ -28,7 +28,7 @@ export function ProjectTypeDropdown({
       <DropdownMenuTrigger asChild>
         <Button
           variant='outline'
-          className='min-w-[140px] capitalize flex items-center justify-between gap-2'
+          className='min-w-[140px] capitalize flex items-center justify-between gap-2 border-2'
         >
           <span>
             {PROJECT_TYPES.find((t) => t.value === value)?.label ||
@@ -44,7 +44,7 @@ export function ProjectTypeDropdown({
             onSelect={() => onChange(type.value)}
             className={
               value === type.value
-                ? "font-bold bg-blue-100 dark:bg-blue-900/40"
+                ? "bg-blue-100 dark:bg-blue-900/40"
                 : ""
             }
           >

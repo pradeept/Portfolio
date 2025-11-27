@@ -23,7 +23,7 @@ function Projects() {
         >
           Projects
         </motion.div>
-        <div className='w-full flex justify-center md:justify-end'>
+        <div className='w-full flex justify-center md:justify-start'>
           <ProjectTypeDropdown
             value={selectedType}
             onChange={setSelectedType}

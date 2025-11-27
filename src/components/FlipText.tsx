@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 
 interface FlipTextProps {
   words?: string[];
-  duration?: number; // Time to read the word before flipping
+  duration?: number;
   className?: string;
 }
 
@@ -24,11 +24,11 @@ const FlipText: React.FC<FlipTextProps> = ({
   }, [words.length, duration]);
 
   return (
-    <div className='flex items-center justify-center gap-2 text-2xl font-light md:text-2xl'>
-      <span className='dark:text-gray-300 text-slate-700'>I am a</span>
+    <div className='flex items-center justify-center gap-1 text-2xl font-light md:text-2xl'>
+      <span className='dark:text-gray-300 text-slate-700'>Me? --</span>
 
       {/* Flip Container */}
-      <div className='relative flex items-center justify-center min-w-[250px] perspective-[500px]'>
+      <div className='relative inline-block perspective-[500px]'>
         <AnimatePresence mode='wait'>
           <motion.span
             key={words[index]} // Key change triggers the animation
@@ -36,12 +36,12 @@ const FlipText: React.FC<FlipTextProps> = ({
             animate={{ rotateX: 0, opacity: 1 }}
             exit={{ rotateX: 90, opacity: 0 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className={`absolute whitespace-nowrap bg-clip-text text-transparent bg-gradient-to-r from-slate-900 to-slate-500 dark:from-slate-100 dark:to-slate-400 ${className}`}
+            className={`absolute left-0 top-1/2 -translate-y-1/2 whitespace-nowrap bg-clip-text text-transparent bg-orange-300 ${className}`}
           >
             {words[index]}
           </motion.span>
         </AnimatePresence>
-        <span className='invisible opacity-0' aria-hidden='true'>
+        <span className='invisible block' aria-hidden='true'>
           {words.reduce((a, b) => (a.length > b.length ? a : b))}
         </span>
       </div>

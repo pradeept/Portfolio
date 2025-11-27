@@ -3,7 +3,6 @@ import { project } from "@/types/projectType";
 import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
 import Image, { StaticImageData } from "next/image";
-import project1 from "../../public/profile.png";
 import lingoGo from "../../public/projects/lingoGo.png";
 import featherLogs from "../../public/projects/featherlogs.png";
 import edditor from "../../public/projects/edditor.png";
@@ -14,7 +13,7 @@ import infisical from "../../public/projects/infisical.png";
 import nextcloud from "../../public/projects/nextcloud.png";
 import provisionercli from "../../public/projects/provisionercli.png";
 import nullnet from "../../public/projects/nullnet.png";
-import ragloma from "../../public/projects/RAGloma.png"
+import ragloma from "../../public/projects/RAGloma.png";
 
 import {
   IconArrowRight,
@@ -23,7 +22,6 @@ import {
 } from "@tabler/icons-react";
 import { usePathname, useRouter } from "next/navigation";
 const images: Record<string, StaticImageData> = {
-  "project1.png": project1,
   "RAGloma.png": ragloma,
   "lingoGo.png": lingoGo,
   "featherlogs.png": featherLogs,
@@ -51,9 +49,9 @@ function ProjectCard({ data }: { data: project }) {
   return (
     <motion.div
       whileHover={{
-        boxShadow: "0 4px 10px 0 #ef4444",
+        boxShadow: "0 4px 10px 0 #C0C0C0",
       }}
-      transition={{ type: "spring", stiffness: 200 }}
+      transition={{ type: "spring", stiffness: 500 }}
       className='group p-6 md:p-8 bg-white/80 dark:bg-neutral-900/80 border border-neutral-200 dark:border-neutral-800 rounded-3xl shadow-xl backdrop-blur-md hover:shadow-2xl hover:dark:border-blue-400 hover:border-purple-700 transition-all duration-300 flex flex-col min-h-[500px]'
     >
       <div className='flex justify-center items-center mb-4'>

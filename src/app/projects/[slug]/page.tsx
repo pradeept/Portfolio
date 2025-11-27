@@ -3,30 +3,31 @@ import projectsData from "@/lib/data/projectsData.json";
 import Image, { StaticImageData } from "next/image";
 import { notFound } from "next/navigation";
 import { IconExternalLink, IconBrandGithub } from "@tabler/icons-react";
-import lingoGo from "../../../../public/projects/lingoGo.png";
-import featherLogs from "../../../../public/projects/featherlogs.png";
-import edditor from "../../../../public/projects/edditor.png";
-import emiCalc from "../../../../public/projects/emiCalculator.png";
-import expenseMgr from "../../../../public/projects/expenseMgr.png";
-import trelloClone from "../../../../public/projects/trelloClone.png";
-import infisical from "../../../../public/projects/infisical.png";
-import nextcloud from "../../../../public/projects/nextcloud.png";
-import provisionercli from "../../../../public/projects/provisionercli.png";
-import nullnet from "../../../../public/projects/nullnet.png";
+import lingoGo from "@/../public/projects/lingoGo.png";
+import featherLogs from "@/../public/projects/featherlogs.png";
+import edditor from "@/../public/projects/edditor.png";
+import emiCalc from "@/../public/projects/emiCalculator.png";
+import expenseMgr from "@/../public/projects/expenseMgr.png";
+import trelloClone from "@/../public/projects/trelloClone.png";
+import infisical from "@/../public/projects/infisical.png";
+import nextcloud from "@/../public/projects/nextcloud.png";
+import provisionercli from "@/../public/projects/provisionercli.png";
+import nullnet from "@/../public/projects/nullnet.png";
+import ragloma from "@/../public/projects/RAGloma.png";
 
 const images: Record<string, StaticImageData> = {
+  "RAGloma.png": ragloma,
   "lingoGo.png": lingoGo,
   "featherlogs.png": featherLogs,
   "edditor.png": edditor,
   "emiCalculator.png": emiCalc,
-  "expenseMgr.png": expenseMgr,
   "trelloClone.png": trelloClone,
+  "expenseMgr.png": expenseMgr,
   "infisical.png": infisical,
   "nextcloud.png": nextcloud,
   "provisionercli.png": provisionercli,
   "nullnet.png": nullnet,
 };
-
 export default async function ProjectDetailPage({
   params,
 }: {
