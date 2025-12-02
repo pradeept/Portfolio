@@ -25,7 +25,7 @@ const FlipText: React.FC<FlipTextProps> = ({
 
   return (
     <div className='flex items-center justify-center gap-1 text-2xl font-light md:text-2xl'>
-      <span className='dark:text-gray-300 text-slate-700'>Me? --</span>
+      <span className='dark:text-gray-300 text-slate-700'>Me? -</span>
 
       {/* Flip Container */}
       <div className='relative inline-block perspective-[500px]'>
@@ -36,7 +36,7 @@ const FlipText: React.FC<FlipTextProps> = ({
             animate={{ rotateX: 0, opacity: 1 }}
             exit={{ rotateX: 90, opacity: 0 }}
             transition={{ duration: 0.5, ease: "easeInOut" }}
-            className={`absolute left-0 top-1/2 -translate-y-1/2 whitespace-nowrap bg-clip-text text-transparent bg-orange-300 ${className}`}
+            className={`absolute left-0 top-1/2 -translate-y-1/2 whitespace-nowrap bg-clip-text text-transparent dark:bg-orange-300 bg-orange-600 ${className}`}
           >
             {words[index]}
           </motion.span>

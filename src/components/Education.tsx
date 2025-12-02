@@ -8,8 +8,11 @@ const eduData = [
     title: "Dec 2021 - Sep 2023",
 
     content: (
-      <div className='flex justify-between'>
-        <a href='https://in.linkedin.com/school/dayananda-sagar-college-of-engineering-bangalore/' target="_blank">
+      <div className='flex justify-between flex-col md:flex-row gap-4'>
+        <a
+          href='https://in.linkedin.com/school/dayananda-sagar-college-of-engineering-bangalore/'
+          target='_blank'
+        >
           <Image
             src={college}
             alt='dsce-logo'
@@ -30,23 +33,6 @@ const eduData = [
       </div>
     ),
   },
-  // {
-  //   title: "Jun 2018 - Sep 2021",
-
-  //   content: (
-  //     <div>
-  //       <div className='flex flex-col gap-2'>
-  //         <h1 className='text-xl md:text-3xl dark:text-yellow-300 text-yellow-700'>
-  //           Bachelor of Computer Applications
-  //         </h1>
-
-  //         <p className='text-md md:text-lg dark:text-blue-200 text-blue-800 hover:underline'>
-  //           Basaveshwar Science College, Bagalkot
-  //         </p>
-  //       </div>
-  //     </div>
-  //   ),
-  // },
 ];
 export default function Education() {
   return (

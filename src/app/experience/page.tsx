@@ -12,23 +12,33 @@ function Experience() {
         <div>
           <div className='flex flex-col gap-2'>
             <h1 className='text-xl md:text-4xl dark:text-yellow-300 text-yellow-700'>
-              Freelancer and Tutor
+              Independent Backend Engineer
             </h1>
             <a className='text-sm md:text-md dark:text-blue-200 text-blue-800 hover:underline'>
-              Self-Employed
+              Self-Employed (Independent R&D)
             </a>
           </div>
           <ul className='flex flex-col gap-2 md:gap-3 dark:text-gray-200 text-sm mt-4'>
             <li>- Delivered and deployed web applications for 3 clients.</li>
-            <li>- Conducted 10+ tutoring sessions on Preply.</li>
             <li>
-              - Actively expanding my skill set in modern technologies,
-              including{" "}
+              - Engaged in self-directed research on {" "}
               <span className='dark:text-orange-300 text-orange-400'>
-                LangChain, PostgreSQL, backend design principles, architectural
-                patterns, and DSA
+                Backend Architecture Patterns (Clean Architecture, Hexagonal), {" "}
               </span>
-              .
+              implementing them in proof-of-concept microservices.
+            </li>
+            <li>
+              - Built RAGloma, an AI-driven knowledge base using {" "}
+              <span className='dark:text-orange-300 text-orange-400'>
+                LangChain, Pinecone and Redis (rate-limiting),{" "}
+              </span>
+              focusing on vector embeddings and efficient context retrieval.
+            </li>
+            <li>
+              - Contributed to Open Source projects and made it to {" "}
+              <span className='dark:text-orange-300 text-orange-400'>
+                Hacktoberfest HOF 2025.
+              </span>
             </li>
           </ul>
         </div>

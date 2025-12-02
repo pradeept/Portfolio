@@ -9,6 +9,9 @@ import * as motion from "motion/react-client";
 import Image from "next/image";
 import profile from "../../../public/profile_pic_gibly.png";
 import { PointerHighlight } from "@/components/acerternity-ui/PointerHighlight";
+import medium from "@/../public/medium.png";
+import thm from "@/../public/thm.png";
+
 function About() {
   return (
     <div className='min-h-screen z-20  dark:bg-gray-900/80 mb-7 md:mb-10 bg-gray-100 mx-mdplus'>
@@ -91,6 +94,24 @@ function About() {
                   <IconBrandLinkedin
                     size={44}
                     className='dark:text-blue-300 text-blue-600 rounded'
+                  />
+                </a>
+                <a href='https://medium.com/@pradeep.tarakar17' target='_blank'>
+                  <Image
+                    src={medium}
+                    width={68}
+                    height={60}
+                    alt='medium-icon'
+                    className='rounded-full'
+                  />
+                </a>
+                <a href='https://tryhackme.com/p/0b2' target='_blank' className="flex justify-center items-center">
+                  <Image
+                    src={thm}
+                    width={50}
+                    height={44}
+                    alt='thm-icon'
+                    className='rounded-full'
                   />
                 </a>
               </div>
