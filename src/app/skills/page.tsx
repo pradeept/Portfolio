@@ -272,9 +272,9 @@ function Skills() {
               </Tooltip>
             </div>
           </div>
-          {/* DevSecOps Engineering */}
+          {/* DevOps Engineering */}
           <div>
-            <h1 className='font-semibold text-xl mb-4'>Frontend Engineering</h1>
+            <h1 className='font-semibold text-xl mb-4'>DevOps Engineering</h1>
             <div className='flex gap-4 flex-wrap items-center justify-center p-4 border rounded my-2'>
               <Tooltip content='Linux'>
                 <Image
