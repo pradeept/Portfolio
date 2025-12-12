@@ -1,5 +1,77 @@
 [
   {
+    "projectName": "Backerman",
+    "slug": "backerman",
+    "imgName": "backerman.png",
+    "description": "A Database backup and restore utility app",
+    "stack": ["Bun", "Commander.JS", "Node.js", "Hexagonal Architecture"],
+    "learnings": ["Postgress ", "Hexagonal architectural pattern"],
+    "challengesFaced": [],
+    "status": "In-progress",
+    "repo": "https://github.com/pradeept/Backerman",
+    "url": "#",
+    "type": "cli",
+    "visible": true,
+    "tag": "Utility"
+  },
+  {
+    "projectName": "Caching-Proxy",
+    "slug": "proxy",
+    "imgName": "caching-proxy.png",
+    "description": "Forward proxy with caching capability + Automated releases.",
+    "stack": ["Bun", "Commander.JS", "Perplexity API", "redis", "Node.js"],
+    "learnings": [
+      "Commander tool",
+      "Bun as a package manager",
+      "Caching responses",
+      "Version control"
+    ],
+    "challengesFaced": [
+      "Building a complete automated versioning",
+      "Validating user arguments",
+      "Structuring the project folders and files"
+    ],
+    "status": "Completed",
+    "repo": "https://github.com/pradeept/caching-proxy-cli",
+    "url": "https://www.npmjs.com/package/caching-proxy-cli",
+    "type": "cli",
+    "visible": true,
+    "tag": "Utility"
+  },
+  {
+    "projectName": "SkillX",
+    "slug": "skillx",
+    "imgName": "skillX.png",
+    "description": "A modern fullstack app for chatting with LLMs, documents, or a web links.",
+    "stack": [
+      "Node.JS",
+      "Express.JS + TS",
+      "Drizzle ORM",
+      "Redis",
+      "Socket.io",
+      "Next.JS",
+      "Tailwind",
+      "zod"
+    ],
+    "learnings": [
+      "Drizzle ORM",
+      "PostgreSQL and pooling",
+      "WebRTC Protocol and API",
+      "Global Error Handling",
+      "Sockets and live notifications"
+    ],
+    "challengesFaced": [
+      "Implementing multiple tables",
+      "Implementing video conference feature"
+    ],
+    "status": "In-progress",
+    "repo": "https://github.com/pradeept/skillX",
+    "url": "#",
+    "type": "web",
+    "visible": true,
+    "tag": "SaaS"
+  },
+  {
     "projectName": "RAGloma",
     "slug": "ragloma",
     "imgName": "RAGloma.png",
@@ -7,10 +79,10 @@
     "stack": [
       "Next.JS",
       "Langchain",
-      "Perplexity API",
       "Ollama",
       "Pinecone",
-      "Upstash (Redis)"
+      "Upstash (Redis)",
+      "Perplexity API"
     ],
     "learnings": [
       "Components of a RAG system",
@@ -26,9 +98,11 @@
       "Debugging edge cases in language translation"
     ],
     "status": "Completed",
-    "repo": "https://github.com/pradeept/chat-bot",
-    "url": "https://lingogo-langchain-perplexity.netlify.app/",
-    "type": "web"
+    "repo": "https://github.com/pradeept/RAGloma",
+    "url": "#",
+    "type": "web",
+    "visible": true,
+    "tag": "RAG - AI"
   },
   {
     "projectName": "LingoGo",
@@ -53,21 +127,16 @@
     "status": "Completed",
     "repo": "https://github.com/pradeept/chat-bot",
     "url": "https://lingogo-langchain-perplexity.netlify.app/",
-    "type": "web"
+    "type": "web",
+    "visible": false,
+    "tag": "AI"
   },
   {
     "projectName": "Featherlogs",
     "slug": "featherlogs",
     "imgName": "featherlogs.png",
     "description": "A modern fullstack Blog Application with seamless authentication and rich UX with beautiful animations.",
-    "stack": [
-      "Next.JS",
-      "Typescript",
-      "NextAuth",
-      "Mongoose",
-      "Motion(framer)",
-      "CSS Modules"
-    ],
+    "stack": ["Next.JS", "Typescript", "NextAuth", "Mongoose", "Framer-Motion"],
     "learnings": [
       "API, Data fetching, Server actions and form state",
       "Working with MongoDB Atlas, Nextauth and middleware",
@@ -86,19 +155,21 @@
     "status": "Completed",
     "repo": "https://github.com/pradeept/featherlogs",
     "url": "https://featherlogs.vercel.app/",
-    "type": "web"
+    "type": "web",
+    "visible": true,
+    "tag": "Fullstack"
   },
   {
     "projectName": "Edditor",
     "slug": "edditor",
     "imgName": "edditor.png",
-    "description": "Edditor is a rich text editor featuring Google OAuth login, Google Drive integration, and local document downloads for a seamless, secure, and user-friendly writing experience.",
+    "description": "Edditor is a rich text editor featuring OAuth and Google Drive integration for a secure, and user-friendly writing experience.",
     "stack": [
       "React.JS (TS)",
       "Express.JS",
       "Quill",
       "Passport",
-      "Google Drive",
+      "Google Drive & Oauth",
       "TailwindCSS"
     ],
     "learnings": [
@@ -117,7 +188,9 @@
     "status": "Completed",
     "repo": "https://github.com/pradeept/edditor",
     "url": "https://www.youtube.com/watch?v=_uJ5K92zylA",
-    "type": "web"
+    "type": "web",
+    "visible": true,
+    "tag": "Fullstack"
   },
   {
     "projectName": "Trello Clone",
@@ -148,7 +221,9 @@
     "status": "Completed",
     "repo": "https://github.com/pradeept/Trello-clone",
     "url": "https://trello-clone-pradeept.netlify.app/",
-    "type": "web"
+    "type": "web",
+    "visible": true,
+    "tag": "Clone"
   },
 
   {
@@ -169,7 +244,9 @@
     ],
     "status": "Completed",
     "repo": "https://github.com/pradeept/Provisioner-CLI-APP",
-    "type": "devops"
+    "type": "cli",
+    "visible": true,
+    "tag": "Utility"
   },
   {
     "projectName": "Infisical Deployment",
@@ -189,7 +266,9 @@
     ],
     "status": "Completed",
     "repo": "https://github.com/pradeept/Infisical",
-    "type": "devops"
+    "type": "devops",
+    "visible": true,
+    "tag": "IaC - Automation"
   },
   {
     "projectName": "Nextcloud",
@@ -210,7 +289,9 @@
     ],
     "status": "Completed",
     "repo": "https://github.com/pradeept/Nextcloud",
-    "type": "devops"
+    "type": "devops",
+    "visible": true,
+    "tag": "IaC - Automation"
   },
   {
     "projectName": "NullNet",
@@ -231,6 +312,8 @@
     ],
     "status": "Completed",
     "repo": "https://github.com/pradeept/nullnet",
-    "type": "mobile"
+    "type": "mobile",
+    "visible": true,
+    "tag": "Wireless Chat"
   }
 ]

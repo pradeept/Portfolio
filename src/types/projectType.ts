@@ -1,7 +1,7 @@
 export type project = {
   projectName: string;
   imgName: string;
-  slug:string,
+  slug: string;
   description: string;
   learnings: string[];
   stack: string[];
@@ -9,5 +9,7 @@ export type project = {
   status: string;
   url?: string;
   repo: string;
-  type:string;
+  type: string;
+  visible: boolean;
+  tag: string;
 };

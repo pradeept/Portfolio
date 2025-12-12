@@ -12,6 +12,7 @@ import { ChevronDown } from "lucide-react";
 
 const PROJECT_TYPES = [
   { label: "Web Apps", value: "web" },
+  { label: "CLI", value: "cli" },
   { label: "DevOps", value: "devops" },
   { label: "Mobile", value: "mobile" },
 ];
@@ -27,25 +28,23 @@ export function ProjectTypeDropdown({
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
         <Button
-          variant='outline'
-          className='min-w-[140px] capitalize flex items-center justify-between gap-2 border-2'
+          variant="outline"
+          className="min-w-[140px] capitalize flex items-center justify-between gap-2 border-2"
         >
           <span>
             {PROJECT_TYPES.find((t) => t.value === value)?.label ||
               "Select Type"}
           </span>
-          <ChevronDown className='w-4 h-4 ml-2' />
+          <ChevronDown className="w-4 h-4 ml-2" />
         </Button>
       </DropdownMenuTrigger>
-      <DropdownMenuContent align='start'>
+      <DropdownMenuContent align="start">
         {PROJECT_TYPES.map((type) => (
           <DropdownMenuItem
             key={type.value}
             onSelect={() => onChange(type.value)}
             className={
-              value === type.value
-                ? "bg-blue-100 dark:bg-blue-900/40"
-                : ""
+              value === type.value ? "bg-blue-100 dark:bg-blue-900/40" : ""
             }
           >
             {type.label}
