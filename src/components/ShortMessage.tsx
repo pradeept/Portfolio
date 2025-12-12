@@ -4,7 +4,6 @@ export default function Message() {
   const sendMessage = async (formData: FormData) => {
     "use server";
     const message = formData.get("message");
-    console.log(process.env.WEBHOOK_UID);
 
     if (message && message.toString().trim().length > 0) {
       // const WEBHOOK_URL = `https://webhook.site/{process.env.WEBHOOK_UID}`;
