@@ -3,413 +3,375 @@ import * as motion from "motion/react-client";
 
 import { ShootingStars } from "@/components/acerternity-ui/ShootingStars";
 import Image from "next/image";
-import react from "@/../public/skills/react.png";
-import next from "@/../public/skills/nextjs.png";
 import Tooltip from "@/components/Tooltip";
-import tailwind from "@/../public/skills/tailwind.png";
-import cyprus from "@/../public/skills/cyprus.png";
-import reactQuery from "@/../public/skills/tanstackquery.png";
-import socketio from "@/../public/skills/socketio.png";
-import javascript from "@/../public/skills/javascript.png";
-import python from "@/../public/skills/python.png";
-import cpp from "@/../public/skills/cpp.png";
-import java from "@/../public/skills/java.png";
-import node from "@/../public/skills/node.png";
-import express from "@/../public/skills/express.png";
-import rest from "@/../public/skills/rest.png";
-import postgresql from "@/../public/skills/postgresql.png";
-import mongodb from "@/../public/skills/mongodb.png";
-import drizzle from "@/../public/skills/drizzle.png";
-import postman from "@/../public/skills/postman.png";
-import burpsuite from "@/../public/skills/burpsuite.png";
-import redis from "@/../public/skills/redis.png";
-import typescript from "@/../public/skills/typescript.png";
-import radix from "@/../public/skills/radix.png";
-// import poetry from "@/../public/skills/poetry.png";
-import linux from "@/../public/skills/tux.png";
-import elk from "@/../public/skills/elk.png";
-import docker from "@/../public/skills/docker.png";
-import k8s from "@/../public/skills/k8s.png";
-import githubactions from "@/../public/skills/githubactions.png";
-import grafana from "@/../public/skills/grafana.png";
-import prometheus from "@/../public/skills/prometheus.png";
-import snyk from "@/../public/skills/snyk.png";
-import nginx from "@/../public/skills/nginx.png";
-import aws from "@/../public/skills/aws.png";
-import gcp from "@/../public/skills/gcp.png";
-import raspberrypi from "@/../public/skills/rasberrypi.png";
-import terraform from "@/../public/skills/terraform.png";
-import ansible from "@/../public/skills/ansible.png";
-import vault from "@/../public/skills/vault.png";
-import snort from "@/../public/skills/snort.png";
-
+import skillIcons from "@/lib/skillImages";
 
 function Skills() {
   return (
-    <div className=' mx-16 md:mx-34 min-h-screen flex flex-col items-center justify-center gap-8 md:gap-8 xl:gap-12 px-2 py-8 bg-transparent mb-10 md:mb-20'>
+    <div className=" mx-16 md:mx-34 min-h-screen flex flex-col items-center justify-center gap-8 md:gap-8 xl:gap-12 px-2 py-8 bg-transparent mb-10 md:mb-20">
       <ShootingStars />
       {/* Title */}
       <motion.h1
         initial={{ opacity: 0, scale: 0 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true }}
-        className='border mb-8 text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-black/40 to-black dark:from-white/85 dark:to-gray-50/40'
+        className="border mb-8 text-5xl md:text-6xl font-bold bg-clip-text text-transparent bg-gradient-to-b from-black/40 to-black dark:from-white/85 dark:to-gray-50/40"
       >
         Skills
       </motion.h1>
-      <div className=' w-full '>
+      <div className=" w-full ">
         <div>
-          <h1 className='font-semibold text-xl mb-4'>Programming Languages</h1>
-          <div className='flex gap-4 flex-wrap items-center justify-center p-4 border rounded my-2'>
-            <Tooltip content='JavaScript'>
+          <h1 className="font-semibold text-xl mb-4">Programming Languages</h1>
+          <div className="flex gap-4 flex-wrap items-center justify-center p-4 border rounded my-2">
+            <Tooltip content="JavaScript">
               <Image
-                src={javascript}
+                src={skillIcons.javascript}
                 width={44}
                 height={44}
-                alt='postgresql-icon'
-                className='rounded border '
+                alt="postgresql-icon"
+                className="rounded border "
               />
             </Tooltip>
-            <Tooltip content='Python'>
+            <Tooltip content="Python">
               <Image
-                src={python}
+                src={skillIcons.python}
                 width={44}
                 height={44}
-                alt='python-icon'
-                className='rounded border p-0.5'
+                alt="python-icon"
+                className="rounded border p-0.5"
               />
             </Tooltip>
-            <Tooltip content='C++'>
+            <Tooltip content="C++">
               <Image
-                src={cpp}
+                src={skillIcons.cpp}
                 width={44}
                 height={44}
-                alt='cpp-icon'
-                className='rounded border p-0.5'
+                alt="cpp-icon"
+                className="rounded border p-0.5"
               />
             </Tooltip>
-            <Tooltip content='Java'>
+            <Tooltip content="Java">
               <Image
-                src={java}
+                src={skillIcons.java}
                 width={44}
                 height={44}
-                alt='java-icon'
-                className='rounded border p-0.5'
+                alt="java-icon"
+                className="rounded border p-0.5"
               />
             </Tooltip>
           </div>
           {/* Backend Engineering */}
-          <div className=''>
-            <h1 className='font-semibold text-xl mb-4'>Backend Engineering</h1>
-            <div className='flex gap-4 flex-wrap items-center justify-center p-4 border rounded my-2'>
-              <Tooltip content='Node.js'>
+          <div className="">
+            <h1 className="font-semibold text-xl mb-4">Backend Engineering</h1>
+            <div className="flex gap-4 flex-wrap items-center justify-center p-4 border rounded my-2">
+              <Tooltip content="Node.js">
                 <Image
-                  src={node}
+                  src={skillIcons.node}
                   width={44}
                   height={44}
-                  alt='nodejs-icon'
-                  className='rounded border p-0.5'
+                  alt="nodejs-icon"
+                  className="rounded border p-0.5"
                 />
               </Tooltip>
-              <Tooltip content='Express.js'>
+              <Tooltip content="Express.js">
                 <Image
-                  src={express}
+                  src={skillIcons.express}
                   width={44}
                   height={44}
-                  alt='express-icon'
-                  className='rounded border p-0.5 bg-white'
+                  alt="express-icon"
+                  className="rounded border p-0.5 bg-white"
                 />
               </Tooltip>
-              <Tooltip content='REST APIs'>
+              <Tooltip content="REST APIs">
                 <Image
-                  src={rest}
+                  src={skillIcons.rest}
                   width={44}
                   height={44}
-                  alt='rest-icon'
-                  className='rounded border p-0.5'
+                  alt="rest-icon"
+                  className="rounded border p-0.5"
                 />
               </Tooltip>
-              <Tooltip content='PostgreSQL'>
+              <Tooltip content="PostgreSQL">
                 <Image
-                  src={postgresql}
+                  src={skillIcons.postgresql}
                   width={44}
                   height={44}
-                  alt='postgresql-icon'
-                  className='rounded border p-0.5'
+                  alt="postgresql-icon"
+                  className="rounded border p-0.5"
                 />
               </Tooltip>
-              <Tooltip content='MongoDB'>
+              <Tooltip content="MongoDB">
                 <Image
-                  src={mongodb}
+                  src={skillIcons.mongodb}
                   width={44}
                   height={44}
-                  alt='mongodb-icon'
-                  className='rounded border p-0.5'
+                  alt="mongodb-icon"
+                  className="rounded border p-0.5"
                 />
               </Tooltip>
-              <Tooltip content='Drizzle-ORM'>
+              <Tooltip content="Drizzle-ORM">
                 <Image
-                  src={drizzle}
+                  src={skillIcons.drizzle}
                   width={44}
                   height={44}
-                  alt='drizzle-icon'
-                  className='rounded border p-0.5'
+                  alt="drizzle-icon"
+                  className="rounded border p-0.5"
                 />
               </Tooltip>
-              <Tooltip content='Redis'>
+              <Tooltip content="Redis">
                 <Image
-                  src={redis}
+                  src={skillIcons.redis}
                   width={44}
                   height={44}
-                  alt='redis-icon'
-                  className='rounded border p-0.5'
+                  alt="redis-icon"
+                  className="rounded border p-0.5"
                 />
               </Tooltip>
-              <Tooltip content='Socket.io'>
+              <Tooltip content="Socket.io">
                 <Image
-                  src={socketio}
+                  src={skillIcons.socketio}
                   width={44}
                   height={44}
-                  alt='socketio-icon'
-                  className='rounded border p-0.5 bg-white'
+                  alt="socketio-icon"
+                  className="rounded border p-0.5 bg-white"
                 />
               </Tooltip>
-              <Tooltip content='Nginx'>
+              <Tooltip content="Nginx">
                 <Image
-                  src={nginx}
+                  src={skillIcons.nginx}
                   width={44}
                   height={44}
-                  alt='nginx-icon'
-                  className='rounded border p-0.5'
+                  alt="nginx-icon"
+                  className="rounded border p-0.5"
                 />
               </Tooltip>
-              <Tooltip content='Postman'>
+              <Tooltip content="Postman">
                 <Image
-                  src={postman}
+                  src={skillIcons.postman}
                   width={44}
                   height={44}
-                  alt='postman-icon'
-                  className='rounded border p-0.5'
+                  alt="postman-icon"
+                  className="rounded border p-0.5"
                 />
               </Tooltip>
-              <Tooltip content='BurpSuite'>
+              <Tooltip content="BurpSuite">
                 <Image
-                  src={burpsuite}
+                  src={skillIcons.burpsuite}
                   width={44}
                   height={44}
-                  alt='burpsuite-icon'
-                  className='rounded border p-0.5'
+                  alt="burpsuite-icon"
+                  className="rounded border p-0.5"
                 />
               </Tooltip>
             </div>
           </div>
           {/* Frontend Engineering */}
           <div>
-            <h1 className='font-semibold text-xl mb-4'>Frontend Engineering</h1>
-            <div className='flex gap-4 flex-wrap items-center justify-center p-4 border rounded my-2'>
-              <Tooltip content='Next.js'>
+            <h1 className="font-semibold text-xl mb-4">Frontend Engineering</h1>
+            <div className="flex gap-4 flex-wrap items-center justify-center p-4 border rounded my-2">
+              <Tooltip content="Next.js">
                 <Image
-                  src={next}
+                  src={skillIcons.next}
                   width={44}
                   height={44}
-                  alt='nextjs-icon'
-                  className='rounded border p-0.5 bg-white'
+                  alt="nextjs-icon"
+                  className="rounded border p-0.5 bg-white"
                 />
               </Tooltip>
-              <Tooltip content='React.js'>
+              <Tooltip content="React.js">
                 <Image
-                  src={react}
+                  src={skillIcons.react}
                   width={44}
                   height={44}
-                  alt='react-icon'
-                  className='rounded border p-0.5'
+                  alt="react-icon"
+                  className="rounded border p-0.5"
                 />
               </Tooltip>
-              <Tooltip content='Typescript'>
+              <Tooltip content="Typescript">
                 <Image
-                  src={typescript}
+                  src={skillIcons.typescript}
                   width={44}
                   height={44}
-                  alt='typescript-icon'
-                  className='rounded border p-0.5'
+                  alt="typescript-icon"
+                  className="rounded border p-0.5"
                 />
               </Tooltip>
-              <Tooltip content='TailwindCSS'>
+              <Tooltip content="TailwindCSS">
                 <Image
-                  src={tailwind}
+                  src={skillIcons.tailwind}
                   width={44}
                   height={44}
-                  alt='tailwind-icon'
-                  className='rounded border p-0.5'
+                  alt="tailwind-icon"
+                  className="rounded border p-0.5"
                 />
               </Tooltip>
-              <Tooltip content='RadixUI'>
+              <Tooltip content="RadixUI">
                 <Image
-                  src={radix}
+                  src={skillIcons.radix}
                   width={44}
                   height={44}
-                  alt='radix-icon'
-                  className='rounded border p-0.5'
+                  alt="radix-icon"
+                  className="rounded border p-0.5"
                 />
               </Tooltip>
-              <Tooltip content='Tanstack Query'>
+              <Tooltip content="Tanstack Query">
                 <Image
-                  src={reactQuery}
+                  src={skillIcons.reactQuery}
                   width={44}
                   height={44}
-                  alt='reactquery-icon'
-                  className='rounded border p-0.5'
+                  alt="reactquery-icon"
+                  className="rounded border p-0.5"
                 />
               </Tooltip>
-              <Tooltip content='Cyprus'>
+              <Tooltip content="Cyprus">
                 <Image
-                  src={cyprus}
+                  src={skillIcons.cyprus}
                   width={44}
                   height={44}
-                  alt='cyprus-icon'
-                  className='rounded border p-0.5'
+                  alt="cyprus-icon"
+                  className="rounded border p-0.5"
                 />
               </Tooltip>
             </div>
           </div>
           {/* DevOps Engineering */}
           <div>
-            <h1 className='font-semibold text-xl mb-4'>DevOps Engineering</h1>
-            <div className='flex gap-4 flex-wrap items-center justify-center p-4 border rounded my-2'>
-              <Tooltip content='Linux'>
+            <h1 className="font-semibold text-xl mb-4">DevOps Engineering</h1>
+            <div className="flex gap-4 flex-wrap items-center justify-center p-4 border rounded my-2">
+              <Tooltip content="Linux">
                 <Image
-                  src={linux}
+                  src={skillIcons.linux}
                   width={44}
                   height={44}
-                  alt='linux-icon'
-                  className='rounded border p-0.5'
+                  alt="linux-icon"
+                  className="rounded border p-0.5"
                 />
               </Tooltip>
-              <Tooltip content='Docker'>
+              <Tooltip content="Docker">
                 <Image
-                  src={docker}
+                  src={skillIcons.docker}
                   width={44}
                   height={44}
-                  alt='docker-icon'
-                  className='rounded border p-0.5 bg-white'
+                  alt="docker-icon"
+                  className="rounded border p-0.5 bg-white"
                 />
               </Tooltip>
-              <Tooltip content='Kubernetes'>
+              <Tooltip content="Kubernetes">
                 <Image
-                  src={k8s}
+                  src={skillIcons.k8s}
                   width={44}
                   height={44}
-                  alt='k8s-icon'
-                  className='rounded border p-0.5'
+                  alt="k8s-icon"
+                  className="rounded border p-0.5"
                 />
               </Tooltip>
-              <Tooltip content='GitHub Actions'>
+              <Tooltip content="GitHub Actions">
                 <Image
-                  src={githubactions}
+                  src={skillIcons.githubactions}
                   width={44}
                   height={44}
-                  alt='githubactions-icon'
-                  className='rounded border p-0.5'
+                  alt="githubactions-icon"
+                  className="rounded border p-0.5"
                 />
               </Tooltip>
-              <Tooltip content='AWS'>
+              <Tooltip content="AWS">
                 <Image
-                  src={aws}
+                  src={skillIcons.aws}
                   width={44}
                   height={44}
-                  alt='aws-icon'
-                  className='rounded border p-0.5 bg-white'
+                  alt="aws-icon"
+                  className="rounded border p-0.5 bg-white"
                 />
               </Tooltip>
-              <Tooltip content='GCP'>
+              <Tooltip content="GCP">
                 <Image
-                  src={gcp}
+                  src={skillIcons.gcp}
                   width={44}
                   height={44}
-                  alt='gcp-icon'
-                  className='rounded border p-0.5'
+                  alt="gcp-icon"
+                  className="rounded border p-0.5"
                 />
               </Tooltip>
-              <Tooltip content='Terraform'>
+              <Tooltip content="Terraform">
                 <Image
-                  src={terraform}
+                  src={skillIcons.terraform}
                   width={44}
                   height={44}
-                  alt='terraform-icon'
-                  className='rounded border p-0.5'
+                  alt="terraform-icon"
+                  className="rounded border p-0.5"
                 />
               </Tooltip>
-              <Tooltip content='Ansible'>
+              <Tooltip content="Ansible">
                 <Image
-                  src={ansible}
+                  src={skillIcons.ansible}
                   width={44}
                   height={44}
-                  alt='ansible-icon'
-                  className='rounded border p-0.5'
+                  alt="ansible-icon"
+                  className="rounded border p-0.5"
                 />
               </Tooltip>
-              <Tooltip content='Vault'>
+              <Tooltip content="Vault">
                 <Image
-                  src={vault}
+                  src={skillIcons.vault}
                   width={44}
                   height={44}
-                  alt='vault-icon'
-                  className='rounded border p-0.5'
+                  alt="vault-icon"
+                  className="rounded border p-0.5"
                 />
               </Tooltip>
-              <Tooltip content='Raspberry pi'>
+              <Tooltip content="Raspberry pi">
                 <Image
-                  src={raspberrypi}
+                  src={skillIcons.raspberrypi}
                   width={44}
                   height={44}
-                  alt='pi-icon'
-                  className='rounded border p-0.5'
+                  alt="pi-icon"
+                  className="rounded border p-0.5"
                 />
               </Tooltip>
 
-              <Tooltip content='Grafana'>
+              <Tooltip content="Grafana">
                 <Image
-                  src={grafana}
+                  src={skillIcons.grafana}
                   width={44}
                   height={44}
-                  alt='grafana-icon'
-                  className='rounded border p-0.5'
+                  alt="grafana-icon"
+                  className="rounded border p-0.5"
                 />
               </Tooltip>
-              <Tooltip content='Prometheus'>
+              <Tooltip content="Prometheus">
                 <Image
-                  src={prometheus}
+                  src={skillIcons.prometheus}
                   width={44}
                   height={44}
-                  alt='prometheus-icon'
-                  className='rounded border p-0.5'
+                  alt="prometheus-icon"
+                  className="rounded border p-0.5"
                 />
               </Tooltip>
-              <Tooltip content='ELK'>
+              <Tooltip content="ELK">
                 <Image
-                  src={elk}
+                  src={skillIcons.elk}
                   width={44}
                   height={44}
-                  alt='elk-icon'
-                  className='rounded border p-0.5'
+                  alt="elk-icon"
+                  className="rounded border p-0.5"
                 />
               </Tooltip>
-              <Tooltip content='Snyk'>
+              <Tooltip content="Snyk">
                 <Image
-                  src={snyk}
+                  src={skillIcons.snyk}
                   width={44}
                   height={44}
-                  alt='snyk-icon'
-                  className='rounded border p-0.5'
+                  alt="snyk-icon"
+                  className="rounded border p-0.5"
                 />
               </Tooltip>
-              <Tooltip content='Snort'>
+              <Tooltip content="Snort">
                 <Image
-                  src={snort}
+                  src={skillIcons.snort}
                   width={44}
                   height={44}
-                  alt='snort-icon'
-                  className='rounded border p-0.5'
+                  alt="snort-icon"
+                  className="rounded border p-0.5"
                 />
               </Tooltip>
             </div>
