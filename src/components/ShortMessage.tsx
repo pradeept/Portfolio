@@ -11,6 +11,7 @@ export default function Message() {
       //   method: "POST",
       //   body: JSON.stringify({ message, date: new Date() }),
       // }).catch((e) => console.error(e));
+      console.log(message);
     }
   };
   return (
