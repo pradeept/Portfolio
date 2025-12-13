@@ -7,7 +7,6 @@ import Experience from "./experience/page";
 import Skills from "./skills/page";
 import Projects from "./projects/page";
 import About from "./about/page";
-import { IconExternalLink } from "@tabler/icons-react";
 import FlipText from "@/components/FlipText";
 import Message from "@/components/ShortMessage";
 
