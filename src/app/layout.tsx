@@ -28,12 +28,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang='en' suppressHydrationWarning>
+    <html lang="en" suppressHydrationWarning>
       <ReactLenis root>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-black scroll-smooth`}
         >
-          <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
+          <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
             {children}
             <Navbar />
           </ThemeProvider>

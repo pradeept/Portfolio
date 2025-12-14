@@ -8,7 +8,7 @@ import Skills from "./skills/page";
 import Projects from "./projects/page";
 import About from "./about/page";
 import FlipText from "@/components/FlipText";
-import Message from "@/components/ShortMessage";
+import { IconExternalLink } from "@tabler/icons-react";
 
 export default function Home() {
   return (
@@ -27,7 +27,7 @@ export default function Home() {
                 loading="lazy"
                 alt="profile"
               />
-              <Message />
+              {/*<Message />*/}
               <p className="md:w-sm w-60 h-1 rounded-2xl bg-slate-100 dark:bg-slate-900 shadow-xl"></p>
             </motion.div>
             <div className="flex flex-col gap-4 px-4 py-6 md:px-8 md:w-auto">
@@ -52,7 +52,7 @@ export default function Home() {
                   />
                 </div>
                 {/* CTA */}
-                {/*<div className="flex items-center cursor-pointer justify-center">
+                <div className="flex items-center cursor-pointer justify-center">
                   <a
                     href="mailto:pradeep.tarakar17@gmail.com?subject=Work Inquiry"
                     rel="noopener noreferrer"
@@ -61,7 +61,7 @@ export default function Home() {
                     Let&apos;s Work Together :)
                     <IconExternalLink />
                   </a>
-                </div>*/}
+                </div>
               </div>
             </div>
           </div>

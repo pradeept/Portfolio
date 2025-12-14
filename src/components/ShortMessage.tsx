@@ -1,4 +1,5 @@
 import { Send } from "lucide-react";
+import store from "@/lib/data/store/MessageStore";
 
 export default function Message() {
   const sendMessage = async (formData: FormData) => {
@@ -6,12 +7,10 @@ export default function Message() {
     const message = formData.get("message");
 
     if (message && message.toString().trim().length > 0) {
-      // const WEBHOOK_URL = `https://webhook.site/{process.env.WEBHOOK_UID}`;
-      // await fetch(WEBHOOK_URL, {
-      //   method: "POST",
-      //   body: JSON.stringify({ message, date: new Date() }),
-      // }).catch((e) => console.error(e));
-      console.log(message);
+      const formattedMessage = message.toString();
+      const date = new Date();
+      store.addMessage({ message: formattedMessage, date });
+      console.log(store.getMessages());
     }
   };
   return (
