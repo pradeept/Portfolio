@@ -10,7 +10,6 @@ export default function Message() {
       const formattedMessage = message.toString();
       const date = new Date();
       store.addMessage({ message: formattedMessage, date });
-      console.log(store.getMessages());
     }
   };
   return (
