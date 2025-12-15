@@ -42,16 +42,17 @@
     "projectName": "SkillX",
     "slug": "skillx",
     "imgName": "skillX.png",
-    "description": "A modern fullstack app for chatting with LLMs, documents, or a web links.",
+    "description": "A complete SaaS platform where users can exchange their skills for p2p learning.",
     "stack": [
       "Node.JS",
       "Express.JS + TS",
       "Drizzle ORM",
       "Redis",
       "Socket.io",
+      "WebRTC",
       "Next.JS",
       "Tailwind",
-      "zod"
+      "Tanstack Query"
     ],
     "learnings": [
       "Drizzle ORM",
