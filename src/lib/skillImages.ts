@@ -37,6 +37,7 @@ import ansible from "@/../public/skills/ansible.png";
 import vault from "@/../public/skills/vault.png";
 import snort from "@/../public/skills/snort.png";
 
+
 const skillIcons = {
   react,
   next,
