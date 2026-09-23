@@ -4,7 +4,9 @@ import "./globals.css";
 import { ThemeProvider } from "next-themes";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import Image from "next/image";
 import { ReactLenis } from "@/lib/lenis";
+import cooking from "@/../public/cooking.png";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,11 +35,22 @@ export default function RootLayout({
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-black scroll-smooth`}
         >
-          <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
+          <div className="flex flex-col justify-center items-center h-screen bg-black">
+            <Image
+              src={cooking}
+              width={600}
+              height={600}
+              className="rounded-2xl"
+              alt="cooking"
+            />
+            <h1 className="text-2xl text-center text-secondary font-mono">Cooking 🧑‍🍳!</h1>
+          </div>
+
+          {/* <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
             {children}
             <Navbar />
           </ThemeProvider>
-          <Footer />
+          <Footer /> */}
         </body>
       </ReactLenis>
     </html>
