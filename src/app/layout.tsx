@@ -1,12 +1,8 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "next-themes";
-import Navbar from "@/components/Navbar";
-import Footer from "@/components/Footer";
-import Image from "next/image";
 import { ReactLenis } from "@/lib/lenis";
-import cooking from "@/../public/cooking.png";
+import CookingSplash from "@/components/CookingSplash";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -33,18 +29,9 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <ReactLenis root>
         <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased bg-white dark:bg-black scroll-smooth`}
+          className={`${geistSans.variable} ${geistMono.variable} bg-black antialiased`}
         >
-          <div className="flex flex-col justify-center items-center h-screen bg-black">
-            <Image
-              src={cooking}
-              width={600}
-              height={600}
-              className="rounded-2xl"
-              alt="cooking"
-            />
-            <h1 className="text-2xl text-center text-secondary font-mono">Cooking 🧑‍🍳!</h1>
-          </div>
+          <CookingSplash />
 
           {/* <ThemeProvider attribute="class" defaultTheme="light" enableSystem>
             {children}
