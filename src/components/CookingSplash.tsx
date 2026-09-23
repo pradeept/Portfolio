@@ -8,7 +8,7 @@ import {
   useSpring,
   useTransform,
 } from "motion/react";
-import { IconChefHat, IconSparkles } from "@tabler/icons-react";
+import { IconChefHat } from "@tabler/icons-react";
 
 import cooking from "@/../public/cooking.png";
 

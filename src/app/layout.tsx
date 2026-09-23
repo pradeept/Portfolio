@@ -20,9 +20,7 @@ export const metadata: Metadata = {
     "Pradeep Tarakar is a full stack developer. This is his personal portfolio to showcase his skills and experience",
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
+export default function RootLayout({}: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
