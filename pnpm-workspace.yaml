@@ -1,3 +1,5 @@
 allowBuilds:
   esbuild: true
   unrs-resolver: true
+# Keep the dependency layout consistent between local runs and CI installs.
+enableGlobalVirtualStore: false
