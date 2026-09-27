@@ -1,6 +1,7 @@
 "use client";
 
 import { DoodleLoop, DoodleSpark } from "@/components/ui/doodles";
+import { analyticsAttributes } from "@/lib/analytics";
 
 import { useState } from "react";
 import Image from "next/image";
@@ -84,6 +85,7 @@ export function HeroBoard() {
             <button
               type="button"
               className="shuffle-button"
+              {...analyticsAttributes("hero_collage_shuffled", { location: "hero" })}
               onClick={() =>
                 setIndex((current) => (current + 1) % arrangements.length)
               }

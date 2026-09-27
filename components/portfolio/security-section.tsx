@@ -1,6 +1,7 @@
 import { DoodleArrow } from "@/components/ui/doodles";
 import { SectionHead } from "@/components/ui/section-heading";
 import { TryHackMeBadge } from "@/components/interactive/tryhackme-badge";
+import { analyticsAttributes } from "@/lib/analytics";
 
 export function SecuritySection() {
   return (
@@ -60,6 +61,7 @@ export function SecuritySection() {
             <a
               className="security-link"
               href="https://medium.com/@pradeep.tarakar17/practical-network-security-with-dmz-and-ids-106353e9ca81"
+              {...analyticsAttributes("article_clicked", { location: "security", article_title: "Practical Network Security with DMZ and IDS", platform: "medium", destination: "https://medium.com/@pradeep.tarakar17/practical-network-security-with-dmz-and-ids-106353e9ca81" })}
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -92,6 +94,7 @@ export function SecuritySection() {
               <a
                 className="security-link"
                 href="https://doi.org/10.55041/IJSREM25165"
+                {...analyticsAttributes("paper_reference_clicked", { location: "security", paper_id: "10.55041/IJSREM25165", paper_title: "Web application security research", destination: "https://doi.org/10.55041/IJSREM25165" })}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -109,6 +112,7 @@ export function SecuritySection() {
               <TryHackMeBadge />
               <a
                 href="https://tryhackme.com/p/0b2"
+                {...analyticsAttributes("profile_clicked", { location: "security", platform: "tryhackme", destination: "https://tryhackme.com/p/0b2" })}
                 target="_blank"
                 rel="noopener noreferrer"
               >

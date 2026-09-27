@@ -2,6 +2,7 @@ import { DoodleArrow, DoodleSpark } from "@/components/ui/doodles";
 import { getArticles } from "@/lib/medium-feed";
 import type { Article } from "@/lib/medium";
 import { SectionHead } from "@/components/ui/section-heading";
+import { analyticsAttributes } from "@/lib/analytics";
 
 const monthFormatter = new Intl.DateTimeFormat("en", {
     month: "short",
@@ -40,6 +41,7 @@ function WritingContent({ articles }: { articles: Article[] }) {
           <a
             className="writing-card writing-feature reveal"
             href={feature.url}
+            {...analyticsAttributes("article_clicked", { location: "writing_featured", article_title: feature.title, platform: "medium", destination: feature.url })}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -60,6 +62,7 @@ function WritingContent({ articles }: { articles: Article[] }) {
                 key={article.url}
                 className="writing-card writing-small reveal"
                 href={article.url}
+                {...analyticsAttributes("article_clicked", { location: "writing_list", article_title: article.title, platform: "medium", destination: article.url })}
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -80,6 +83,7 @@ function WritingContent({ articles }: { articles: Article[] }) {
           <a
             className="outline-link"
             href="https://medium.com/@pradeep.tarakar17"
+            {...analyticsAttributes("writing_archive_clicked", { location: "writing", platform: "medium", destination: "https://medium.com/@pradeep.tarakar17" })}
             target="_blank"
             rel="noopener noreferrer"
           >

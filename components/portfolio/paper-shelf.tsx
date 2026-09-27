@@ -1,6 +1,7 @@
 import { DoodleArrow } from "@/components/ui/doodles";
 import { papers } from "@/lib/content";
 import { SectionHead } from "@/components/ui/section-heading";
+import { analyticsAttributes } from "@/lib/analytics";
 
 export function PaperShelf() {
   return (
@@ -41,6 +42,7 @@ export function PaperShelf() {
                     <a
                       key={link.href}
                       href={link.href}
+                      {...analyticsAttributes("paper_reference_clicked", { location: "paper_shelf", paper_id: paper.number, paper_title: paper.title, link_label: link.label, destination: link.href })}
                       target="_blank"
                       rel="noopener noreferrer"
                     >

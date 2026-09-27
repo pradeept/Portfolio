@@ -1,5 +1,6 @@
 import { DoodleArrow } from "@/components/ui/doodles";
 import type { Project, Repository } from "@/lib/content";
+import { analyticsAttributes } from "@/lib/analytics";
 
 function ProjectArt({ id }: { id: Project["id"] }) {
   const props = {
@@ -92,8 +93,8 @@ function ProjectArt({ id }: { id: Project["id"] }) {
   );
 }
 
-function RepositoryLink({ repository }: { repository: Repository }) {
-  return <a href={repository.href} target="_blank" rel="noopener noreferrer">{repository.label} <DoodleArrow /></a>;
+function RepositoryLink({ repository, project }: { repository: Repository; project: Project }) {
+  return <a href={repository.href} target="_blank" rel="noopener noreferrer" {...analyticsAttributes("project_repository_clicked", { location: "work", project_id: project.id, project_title: project.title, repository_name: repository.label, destination: repository.href })}>{repository.label} <DoodleArrow /></a>;
 }
 
 export function ProjectCard({ project }: { project: Project }) {
@@ -112,11 +113,11 @@ export function ProjectCard({ project }: { project: Project }) {
       </footer>
       {project.repositories ? (
         <div className="automation-links" aria-label="Automation repositories">
-          {project.repositories.deployments.map((repository) => <RepositoryLink key={repository.href} repository={repository} />)}
+          {project.repositories.deployments.map((repository) => <RepositoryLink key={repository.href} repository={repository} project={project} />)}
           <div className="automation-pair">
             <span className="pair-label">Docker + K8s drafts</span>
             <span>
-              {project.repositories.drafts.map((repository) => <RepositoryLink key={repository.href} repository={repository} />)}
+              {project.repositories.drafts.map((repository) => <RepositoryLink key={repository.href} repository={repository} project={project} />)}
             </span>
           </div>
         </div>
@@ -128,6 +129,7 @@ export function ProjectCard({ project }: { project: Project }) {
     <a
       className={className}
       href={project.href}
+      {...analyticsAttributes("project_clicked", { location: "work", project_id: project.id, project_title: project.title, destination: project.href })}
       target="_blank"
       rel="noopener noreferrer"
     >

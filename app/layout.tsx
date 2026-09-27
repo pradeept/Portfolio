@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
+import { Analytics } from "@/components/interactive/analytics";
 import "./globals.css";
 
 const fraunces = localFont({
@@ -51,6 +52,7 @@ export default function RootLayout({
         className={`${fraunces.variable} ${caveat.variable} ${dmMono.variable}`}
       >
         {children}
+        <Analytics />
       </body>
     </html>
   );

@@ -1,5 +1,6 @@
 import { DoodleArrow, DoodleSpark } from "@/components/ui/doodles";
 import { HeroBoard } from "@/components/interactive/hero-board";
+import { analyticsAttributes } from "@/lib/analytics";
 
 export function HeroSection() {
   return (
@@ -28,11 +29,11 @@ export function HeroSection() {
           <p>
             I make things for the web. Then I get curious about the systems
             underneath, the AI in between, and{" "}
-            <a href="#security">what happens when something breaks.</a>
+            <a href="#security" {...analyticsAttributes("hero_cta_clicked", { location: "hero_intro", section: "security", destination: "#security" })}>what happens when something breaks.</a>
           </p>
           <div className="hero-links">
-            <a href="#work">Follow the curiosity <DoodleArrow direction="down" /></a>
-            <a href="#contact">Start a conversation <DoodleArrow /></a>
+            <a href="#work" {...analyticsAttributes("hero_cta_clicked", { location: "hero", section: "work", destination: "#work" })}>Follow the curiosity <DoodleArrow direction="down" /></a>
+            <a href="#contact" {...analyticsAttributes("hero_cta_clicked", { location: "hero", section: "contact", destination: "#contact" })}>Start a conversation <DoodleArrow /></a>
           </div>
           <div className="handnote">Jack of many trades? Guilty. <DoodleArrow /></div>
         </div>

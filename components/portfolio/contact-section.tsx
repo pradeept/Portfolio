@@ -1,5 +1,6 @@
 import { DoodleArrow, DoodleSpark } from "@/components/ui/doodles";
 import { ContactLinks } from "@/components/portfolio/contact-links";
+import { analyticsAttributes } from "@/lib/analytics";
 
 export function ContactSection() {
   return (
@@ -26,12 +27,13 @@ export function ContactSection() {
           <div>
             <a
               href="https://github.com/pradeept"
+              {...analyticsAttributes("profile_clicked", { location: "footer", platform: "github", destination: "https://github.com/pradeept" })}
               target="_blank"
               rel="noopener noreferrer"
             >
               GitHub <DoodleArrow />
             </a>
-            <a href="#top">Back to top <DoodleArrow direction="up" /></a>
+            <a href="#top" {...analyticsAttributes("navigation_clicked", { location: "footer", section: "top", destination: "#top" })}>Back to top <DoodleArrow direction="up" /></a>
           </div>
         </footer>
       </div>

@@ -6,12 +6,19 @@ import { List } from "@phosphor-icons/react/dist/csr/List";
 import { X } from "@phosphor-icons/react/dist/csr/X";
 import { DoodleArrow } from "@/components/ui/doodles";
 import { navItems } from "@/lib/navigation";
+import { analyticsAttributes } from "@/lib/analytics";
 
 export function MobileNavigation() {
   const [open, setOpen] = useState(false);
   return (
     <Dialog.Root open={open} onOpenChange={setOpen}>
-      <Dialog.Trigger className="mobile-menu-trigger" aria-label="Open navigation">
+      <Dialog.Trigger
+        className="mobile-menu-trigger"
+        aria-label="Open navigation"
+        {...analyticsAttributes("mobile_menu_open_clicked", {
+          location: "mobile_navigation",
+        })}
+      >
         <List size={25} weight="bold" aria-hidden="true" />
       </Dialog.Trigger>
       <Dialog.Portal>
@@ -19,16 +26,40 @@ export function MobileNavigation() {
         <Dialog.Content className="menu-paper" aria-describedby={undefined}>
           <div className="menu-heading">
             <Dialog.Title>Pick a tab.</Dialog.Title>
-            <Dialog.Close aria-label="Close navigation"><X size={24} aria-hidden="true" /></Dialog.Close>
+            <Dialog.Close
+              aria-label="Close navigation"
+              {...analyticsAttributes("mobile_menu_close_clicked", {
+                location: "mobile_navigation",
+              })}
+            >
+              <X size={24} aria-hidden="true" />
+            </Dialog.Close>
           </div>
           <nav aria-label="Mobile navigation">
             {navItems.map((item) => (
-              <a key={item.href} href={item.href} onClick={() => setOpen(false)}>
-                {item.label}{"arrow" in item ? <> <DoodleArrow /></> : null}
+              <a
+                key={item.href}
+                href={item.href}
+                onClick={() => setOpen(false)}
+                {...analyticsAttributes("navigation_clicked", {
+                  location: "mobile_navigation",
+                  section: item.href.slice(1),
+                  destination: item.href,
+                })}
+              >
+                {item.label}
+                {"arrow" in item ? (
+                  <>
+                    {" "}
+                    <DoodleArrow />
+                  </>
+                ) : null}
               </a>
             ))}
           </nav>
-          <span className="menu-scribble">follow the curiosity <DoodleArrow /></span>
+          <span className="menu-scribble">
+            follow the curiosity <DoodleArrow />
+          </span>
         </Dialog.Content>
       </Dialog.Portal>
     </Dialog.Root>
