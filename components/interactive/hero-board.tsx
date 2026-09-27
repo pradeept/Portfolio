@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import { DoodleLoop, DoodleSpark } from "@/components/ui/doodles";
-import { analyticsAttributes } from "@/lib/analytics";
+import { DoodleLoop, DoodleSpark } from '@/components/ui/doodles';
+import { analyticsAttributes } from '@/lib/analytics';
 
-import { useState } from "react";
-import Image from "next/image";
-import { LazyMotion, domAnimation, MotionConfig } from "motion/react";
-import * as m from "motion/react-m";
+import { useState } from 'react';
+import Image from 'next/image';
+import { LazyMotion, domAnimation, MotionConfig } from 'motion/react';
+import * as m from 'motion/react-m';
 
 const arrangements = [
   { photo: -6, blue: -8, note: 8, noteX: 0 },
@@ -28,7 +28,7 @@ export function HeroBoard() {
             aria-hidden="true"
             initial={false}
             animate={{ rotate: layout.blue }}
-            transition={{ type: "spring", stiffness: 130, damping: 18 }}
+            transition={{ type: 'spring', stiffness: 130, damping: 18 }}
           >
             <span>FIELD NOTES / THE HUMAN</span>
           </m.div>
@@ -42,7 +42,7 @@ export function HeroBoard() {
             className="portrait"
             initial={false}
             animate={{ rotate: layout.photo }}
-            transition={{ type: "spring", stiffness: 130, damping: 18 }}
+            transition={{ type: 'spring', stiffness: 130, damping: 18 }}
           >
             <Image
               src="/images/pradeep-illustrated-portrait.jpg"
@@ -61,7 +61,7 @@ export function HeroBoard() {
             className="portrait-note"
             initial={false}
             animate={{ rotate: layout.note, x: layout.noteX }}
-            transition={{ type: "spring", stiffness: 130, damping: 18 }}
+            transition={{ type: 'spring', stiffness: 130, damping: 18 }}
           >
             <small>Margin note / 001</small>Currently collecting
             <br />
@@ -74,21 +74,15 @@ export function HeroBoard() {
             <br />
             BY DEFAULT
           </span>
-          <svg
-            className="portrait-arrow"
-            viewBox="0 0 126 118"
-            aria-hidden="true"
-          >
+          <svg className="portrait-arrow" viewBox="0 0 126 118" aria-hidden="true">
             <path d="M112 9C74 4 45 19 49 49c3 24 34 22 28 4-6-20-40-12-57 31m0 0 27-11M20 84l4-29" />
           </svg>
           <div className="shuffle-row">
             <button
               type="button"
               className="shuffle-button"
-              {...analyticsAttributes("hero_collage_shuffled", { location: "hero" })}
-              onClick={() =>
-                setIndex((current) => (current + 1) % arrangements.length)
-              }
+              {...analyticsAttributes('hero_collage_shuffled', { location: 'hero' })}
+              onClick={() => setIndex((current) => (current + 1) % arrangements.length)}
             >
               Shuffle the scraps <DoodleLoop />
             </button>
@@ -97,7 +91,7 @@ export function HeroBoard() {
             </span>
           </div>
           <span className="sr-only" role="status">
-            {index ? `Scraps rearranged, layout ${index + 1} of four.` : ""}
+            {index ? `Scraps rearranged, layout ${index + 1} of four.` : ''}
           </span>
         </div>
       </LazyMotion>

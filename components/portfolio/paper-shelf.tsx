@@ -1,15 +1,11 @@
-import { DoodleArrow } from "@/components/ui/doodles";
-import { papers } from "@/lib/content";
-import { SectionHead } from "@/components/ui/section-heading";
-import { analyticsAttributes } from "@/lib/analytics";
+import { DoodleArrow } from '@/components/ui/doodles';
+import { papers } from '@/lib/content';
+import { SectionHead } from '@/components/ui/section-heading';
+import { analyticsAttributes } from '@/lib/analytics';
 
 export function PaperShelf() {
   return (
-    <section
-      className="paper-section"
-      id="papers"
-      aria-labelledby="papers-title"
-    >
+    <section className="paper-section" id="papers" aria-labelledby="papers-title">
       <div className="shell">
         <SectionHead
           number="04 / Annotated reading"
@@ -42,7 +38,13 @@ export function PaperShelf() {
                     <a
                       key={link.href}
                       href={link.href}
-                      {...analyticsAttributes("paper_reference_clicked", { location: "paper_shelf", paper_id: paper.number, paper_title: paper.title, link_label: link.label, destination: link.href })}
+                      {...analyticsAttributes('paper_reference_clicked', {
+                        location: 'paper_shelf',
+                        paper_id: paper.number,
+                        paper_title: paper.title,
+                        link_label: link.label,
+                        destination: link.href,
+                      })}
                       target="_blank"
                       rel="noopener noreferrer"
                     >
@@ -51,9 +53,7 @@ export function PaperShelf() {
                   ))}
                 </div>
               ) : (
-                <span className="paper-await mono">
-                  Reference PDF coming soon
-                </span>
+                <span className="paper-await mono">Reference PDF coming soon</span>
               )}
             </article>
           ))}

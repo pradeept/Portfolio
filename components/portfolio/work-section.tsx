@@ -1,15 +1,11 @@
-import { DoodleArrow, DoodleTurn } from "@/components/ui/doodles";
-import { projects } from "@/lib/content";
-import { SectionHead } from "@/components/ui/section-heading";
-import { ProjectCard } from "@/components/portfolio/project-card";
+import { DoodleArrow, DoodleTurn } from '@/components/ui/doodles';
+import { projects } from '@/lib/content';
+import { SectionHead } from '@/components/ui/section-heading';
+import { ProjectCard } from '@/components/portfolio/project-card';
 
 export function WorkSection() {
   return (
-    <section
-      className="shell section work-section"
-      id="work"
-      aria-labelledby="work-title"
-    >
+    <section className="shell section work-section" id="work" aria-labelledby="work-title">
       <DoodleTurn className="work-arrow" />
       <SectionHead
         number="01 / The scrapbook"

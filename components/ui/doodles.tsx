@@ -1,17 +1,11 @@
-import type { SVGProps } from "react";
+import type { SVGProps } from 'react';
 
 type DoodleProps = SVGProps<SVGSVGElement>;
-type Direction =
-  | "up-right"
-  | "down-left"
-  | "down-right"
-  | "up"
-  | "down"
-  | "right";
+type Direction = 'up-right' | 'down-left' | 'down-right' | 'up' | 'down' | 'right';
 const rotations: Record<Direction, number> = {
-  "up-right": 0,
-  "down-left": 180,
-  "down-right": 90,
+  'up-right': 0,
+  'down-left': 180,
+  'down-right': 90,
   up: -45,
   down: 135,
   right: 45,
@@ -19,8 +13,8 @@ const rotations: Record<Direction, number> = {
 
 /** SVG keeps decorative marks out of the platform's emoji font fallback. */
 export function DoodleArrow({
-  direction = "up-right",
-  className = "",
+  direction = 'up-right',
+  className = '',
   ...props
 }: DoodleProps & { direction?: Direction }) {
   return (
@@ -44,7 +38,7 @@ export function DoodleArrow({
   );
 }
 
-export function DoodleLoop({ className = "", ...props }: DoodleProps) {
+export function DoodleLoop({ className = '', ...props }: DoodleProps) {
   return (
     <svg
       {...props}
@@ -63,7 +57,7 @@ export function DoodleLoop({ className = "", ...props }: DoodleProps) {
   );
 }
 
-export function DoodleSpark({ className = "", ...props }: DoodleProps) {
+export function DoodleSpark({ className = '', ...props }: DoodleProps) {
   return (
     <svg
       {...props}
@@ -81,7 +75,7 @@ export function DoodleSpark({ className = "", ...props }: DoodleProps) {
   );
 }
 
-export function DoodleTurn({ className = "", ...props }: DoodleProps) {
+export function DoodleTurn({ className = '', ...props }: DoodleProps) {
   return (
     <svg
       {...props}

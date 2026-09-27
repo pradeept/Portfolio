@@ -1,5 +1,5 @@
-import { DoodleArrow } from "@/components/ui/doodles";
-import { jobs } from "@/lib/content";
+import { DoodleArrow } from '@/components/ui/doodles';
+import { jobs } from '@/lib/content';
 
 export function AuthorsNote() {
   return (
@@ -13,13 +13,12 @@ export function AuthorsNote() {
             <em>Pradeep.</em>
           </h2>
           <p>
-            I&apos;ve spent 2+ years making things across the stack—from
-            interfaces and data models to RAG pipelines and cloud
-            infrastructure.
+            I&apos;ve spent 2+ years making things across the stack—from interfaces and data models
+            to RAG pipelines and cloud infrastructure.
           </p>
           <p>
-            Along the way: 30% less cloud spend, automation for 15+ servers,
-            and tools that speak 10+ languages.
+            Along the way: 30% less cloud spend, automation for 15+ servers, and tools that speak
+            10+ languages.
           </p>
           <p className="about-note">
             Apparently, curiosity has a work history. <DoodleArrow />

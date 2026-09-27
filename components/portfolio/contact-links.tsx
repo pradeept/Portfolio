@@ -1,7 +1,7 @@
-import { DoodleArrow } from "@/components/ui/doodles";
-import { EnvelopeSimple } from "@phosphor-icons/react/dist/ssr/EnvelopeSimple";
-import { LinkedinLogo } from "@phosphor-icons/react/dist/ssr/LinkedinLogo";
-import { analyticsAttributes } from "@/lib/analytics";
+import { DoodleArrow } from '@/components/ui/doodles';
+import { EnvelopeSimple } from '@phosphor-icons/react/dist/ssr/EnvelopeSimple';
+import { LinkedinLogo } from '@phosphor-icons/react/dist/ssr/LinkedinLogo';
+import { analyticsAttributes } from '@/lib/analytics';
 
 export function ContactLinks() {
   return (
@@ -9,10 +9,10 @@ export function ContactLinks() {
       <a
         className="contact-tab contact-x"
         href="https://x.com/0x0btoo"
-        {...analyticsAttributes("contact_clicked", {
-          location: "contact",
-          platform: "x",
-          destination: "https://x.com/0x0btoo",
+        {...analyticsAttributes('contact_clicked', {
+          location: 'contact',
+          platform: 'x',
+          destination: 'https://x.com/0x0btoo',
         })}
         target="_blank"
         rel="noopener noreferrer"
@@ -25,9 +25,9 @@ export function ContactLinks() {
       <a
         className="contact-tab contact-email"
         href="mailto:pradeep.tarakar17@gmail.com"
-        {...analyticsAttributes("contact_clicked", {
-          location: "contact",
-          platform: "email",
+        {...analyticsAttributes('contact_clicked', {
+          location: 'contact',
+          platform: 'email',
         })}
       >
         <EnvelopeSimple size={29} weight="duotone" aria-hidden="true" />
@@ -39,10 +39,10 @@ export function ContactLinks() {
       <a
         className="contact-tab contact-linkedin"
         href="https://linkedin.com/in/pradeep-tarakar"
-        {...analyticsAttributes("contact_clicked", {
-          location: "contact",
-          platform: "linkedin",
-          destination: "https://linkedin.com/in/pradeep-tarakar",
+        {...analyticsAttributes('contact_clicked', {
+          location: 'contact',
+          platform: 'linkedin',
+          destination: 'https://linkedin.com/in/pradeep-tarakar',
         })}
         target="_blank"
         rel="noopener noreferrer"

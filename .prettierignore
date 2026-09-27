@@ -1,0 +1,14 @@
+node_modules/
+.pnpm-store/
+.next/
+out/
+build/
+coverage/
+playwright-report/
+test-results/
+prototypes/
+public/
+app/fonts/
+pnpm-lock.yaml
+next-env.d.ts
+.env*

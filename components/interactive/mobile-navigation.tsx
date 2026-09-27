@@ -1,12 +1,12 @@
-"use client";
+'use client';
 
-import { useState } from "react";
-import * as Dialog from "@radix-ui/react-dialog";
-import { List } from "@phosphor-icons/react/dist/csr/List";
-import { X } from "@phosphor-icons/react/dist/csr/X";
-import { DoodleArrow } from "@/components/ui/doodles";
-import { navItems } from "@/lib/navigation";
-import { analyticsAttributes } from "@/lib/analytics";
+import { useState } from 'react';
+import * as Dialog from '@radix-ui/react-dialog';
+import { List } from '@phosphor-icons/react/dist/csr/List';
+import { X } from '@phosphor-icons/react/dist/csr/X';
+import { DoodleArrow } from '@/components/ui/doodles';
+import { navItems } from '@/lib/navigation';
+import { analyticsAttributes } from '@/lib/analytics';
 
 export function MobileNavigation() {
   const [open, setOpen] = useState(false);
@@ -15,8 +15,8 @@ export function MobileNavigation() {
       <Dialog.Trigger
         className="mobile-menu-trigger"
         aria-label="Open navigation"
-        {...analyticsAttributes("mobile_menu_open_clicked", {
-          location: "mobile_navigation",
+        {...analyticsAttributes('mobile_menu_open_clicked', {
+          location: 'mobile_navigation',
         })}
       >
         <List size={25} weight="bold" aria-hidden="true" />
@@ -28,8 +28,8 @@ export function MobileNavigation() {
             <Dialog.Title>Pick a tab.</Dialog.Title>
             <Dialog.Close
               aria-label="Close navigation"
-              {...analyticsAttributes("mobile_menu_close_clicked", {
-                location: "mobile_navigation",
+              {...analyticsAttributes('mobile_menu_close_clicked', {
+                location: 'mobile_navigation',
               })}
             >
               <X size={24} aria-hidden="true" />
@@ -41,16 +41,16 @@ export function MobileNavigation() {
                 key={item.href}
                 href={item.href}
                 onClick={() => setOpen(false)}
-                {...analyticsAttributes("navigation_clicked", {
-                  location: "mobile_navigation",
+                {...analyticsAttributes('navigation_clicked', {
+                  location: 'mobile_navigation',
                   section: item.href.slice(1),
                   destination: item.href,
                 })}
               >
                 {item.label}
-                {"arrow" in item ? (
+                {'arrow' in item ? (
                   <>
-                    {" "}
+                    {' '}
                     <DoodleArrow />
                   </>
                 ) : null}

@@ -1,11 +1,6 @@
-export function Diya({ className = "" }: { className?: string }) {
+export function Diya({ className = '' }: { className?: string }) {
   return (
-    <svg
-      className={`diya ${className}`}
-      viewBox="0 0 64 68"
-      fill="none"
-      aria-hidden="true"
-    >
+    <svg className={`diya ${className}`} viewBox="0 0 64 68" fill="none" aria-hidden="true">
       <path
         className="diya-flame"
         d="M33 29C28 23 29 18 34 8c1 7 9 12 5 19-1 3-3 4-6 4Z"
@@ -14,12 +9,7 @@ export function Diya({ className = "" }: { className?: string }) {
         strokeWidth="2.2"
         strokeLinejoin="round"
       />
-      <path
-        d="M32 31c0 4-1 8-1 11"
-        stroke="#302d2a"
-        strokeWidth="2"
-        strokeLinecap="round"
-      />
+      <path d="M32 31c0 4-1 8-1 11" stroke="#302d2a" strokeWidth="2" strokeLinecap="round" />
       <path
         d="M9 39c6 3 16 5 24 5 9 0 17-2 22-5-2 11-12 18-23 18S12 51 9 39Z"
         fill="#b5453e"

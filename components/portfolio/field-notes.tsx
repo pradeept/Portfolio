@@ -1,13 +1,13 @@
-import { DoodleArrow, DoodleSpark } from "@/components/ui/doodles";
-import { getArticles } from "@/lib/medium-feed";
-import type { Article } from "@/lib/medium";
-import { SectionHead } from "@/components/ui/section-heading";
-import { analyticsAttributes } from "@/lib/analytics";
+import { DoodleArrow, DoodleSpark } from '@/components/ui/doodles';
+import { getArticles } from '@/lib/medium-feed';
+import type { Article } from '@/lib/medium';
+import { SectionHead } from '@/components/ui/section-heading';
+import { analyticsAttributes } from '@/lib/analytics';
 
-const monthFormatter = new Intl.DateTimeFormat("en", {
-    month: "short",
-    year: "numeric",
-    timeZone: "UTC",
+const monthFormatter = new Intl.DateTimeFormat('en', {
+  month: 'short',
+  year: 'numeric',
+  timeZone: 'UTC',
 });
 
 function formatMonth(date: string) {
@@ -17,11 +17,7 @@ function formatMonth(date: string) {
 function WritingContent({ articles }: { articles: Article[] }) {
   const [feature, ...rest] = articles;
   return (
-    <section
-      className="writing section"
-      id="writing"
-      aria-labelledby="writing-title"
-    >
+    <section className="writing section" id="writing" aria-labelledby="writing-title">
       <DoodleSpark className="writing-spark" />
       <div className="shell">
         <SectionHead
@@ -41,19 +37,26 @@ function WritingContent({ articles }: { articles: Article[] }) {
           <a
             className="writing-card writing-feature reveal"
             href={feature.url}
-            {...analyticsAttributes("article_clicked", { location: "writing_featured", article_title: feature.title, platform: "medium", destination: feature.url })}
+            {...analyticsAttributes('article_clicked', {
+              location: 'writing_featured',
+              article_title: feature.title,
+              platform: 'medium',
+              destination: feature.url,
+            })}
             target="_blank"
             rel="noopener noreferrer"
           >
-            <span className="mono">
-              Featured clipping / {feature.category || "from the field"}
-            </span>
-            <div className="article-scribble">fresh from the rabbit hole <DoodleArrow direction="down-right" /></div>
+            <span className="mono">Featured clipping / {feature.category || 'from the field'}</span>
+            <div className="article-scribble">
+              fresh from the rabbit hole <DoodleArrow direction="down-right" />
+            </div>
             <h3>{feature.title}</h3>
-            <p>{feature.excerpt || "A new field note from Pradeep."}</p>
+            <p>{feature.excerpt || 'A new field note from Pradeep.'}</p>
             <footer>
               <span className="mono">{formatMonth(feature.date)}</span>
-              <b>read on Medium <DoodleArrow /></b>
+              <b>
+                read on Medium <DoodleArrow />
+              </b>
             </footer>
           </a>
           <div className="writing-stack">
@@ -62,18 +65,24 @@ function WritingContent({ articles }: { articles: Article[] }) {
                 key={article.url}
                 className="writing-card writing-small reveal"
                 href={article.url}
-                {...analyticsAttributes("article_clicked", { location: "writing_list", article_title: article.title, platform: "medium", destination: article.url })}
+                {...analyticsAttributes('article_clicked', {
+                  location: 'writing_list',
+                  article_title: article.title,
+                  platform: 'medium',
+                  destination: article.url,
+                })}
                 target="_blank"
                 rel="noopener noreferrer"
               >
                 <span className="mono">
-                  {article.category || "Field note"} /{" "}
-                  {formatMonth(article.date)}
+                  {article.category || 'Field note'} / {formatMonth(article.date)}
                 </span>
                 <h3>{article.title}</h3>
                 <footer>
                   <span className="mono">Read on Medium</span>
-                  <b><DoodleArrow /></b>
+                  <b>
+                    <DoodleArrow />
+                  </b>
                 </footer>
               </a>
             ))}
@@ -83,7 +92,11 @@ function WritingContent({ articles }: { articles: Article[] }) {
           <a
             className="outline-link"
             href="https://medium.com/@pradeep.tarakar17"
-            {...analyticsAttributes("writing_archive_clicked", { location: "writing", platform: "medium", destination: "https://medium.com/@pradeep.tarakar17" })}
+            {...analyticsAttributes('writing_archive_clicked', {
+              location: 'writing',
+              platform: 'medium',
+              destination: 'https://medium.com/@pradeep.tarakar17',
+            })}
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -102,7 +115,12 @@ export async function FieldNotes() {
 
 export function FieldNotesSkeleton() {
   return (
-    <section className="writing section" id="writing" aria-labelledby="writing-loading-title" aria-busy="true">
+    <section
+      className="writing section"
+      id="writing"
+      aria-labelledby="writing-loading-title"
+      aria-busy="true"
+    >
       <DoodleSpark className="writing-spark" />
       <div className="shell">
         <SectionHead
@@ -110,9 +128,17 @@ export function FieldNotesSkeleton() {
           title="Things I"
           accent="wrote."
           id="writing-loading-title"
-          aside={<>Write it down<br />before the next rabbit hole. <DoodleArrow direction="down-left" /></>}
+          aside={
+            <>
+              Write it down
+              <br />
+              before the next rabbit hole. <DoodleArrow direction="down-left" />
+            </>
+          }
         />
-        <span className="sr-only" role="status">Opening the field notes.</span>
+        <span className="sr-only" role="status">
+          Opening the field notes.
+        </span>
         <div className="writing-grid" aria-hidden="true">
           <div className="writing-card writing-feature writing-loading">
             <div className="clipping-placeholder short" />
@@ -121,7 +147,12 @@ export function FieldNotesSkeleton() {
             <div className="clipping-placeholder" />
           </div>
           <div className="writing-stack">
-            {[0, 1, 2].map((card) => <div key={card} className="writing-card writing-small writing-loading"><div className="clipping-placeholder short" /><div className="clipping-placeholder heading" /></div>)}
+            {[0, 1, 2].map((card) => (
+              <div key={card} className="writing-card writing-small writing-loading">
+                <div className="clipping-placeholder short" />
+                <div className="clipping-placeholder heading" />
+              </div>
+            ))}
           </div>
         </div>
       </div>
