@@ -19,9 +19,10 @@ export function getPostHog(): Promise<PostHog | null> {
         capture_dead_clicks: false,
         rageclick: false,
         person_profiles: 'never',
-        disable_session_recording: true,
+        // Replay remains subject to the project's recording rules and sampling.
+        disable_session_recording: false,
+        session_recording: { maskAllInputs: true },
         enable_recording_console_log: false,
-        advanced_disable_feature_flags: true,
         disable_surveys: true,
         loaded: (client) => {
           client.register({ app: 'portfolio', environment: process.env.NODE_ENV });

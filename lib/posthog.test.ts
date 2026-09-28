@@ -31,7 +31,7 @@ describe('PostHog initialization', () => {
     },
   );
 
-  it('initializes once for simultaneous callers and keeps recording/autocapture disabled', async () => {
+  it('initializes once, allows project-controlled replay, and keeps autocapture disabled', async () => {
     const { getPostHog } = await import('./posthog');
     const first = getPostHog();
     expect(getPostHog()).toBe(first);
@@ -44,10 +44,13 @@ describe('PostHog initialization', () => {
         capture_pageview: 'history_change',
         capture_pageleave: true,
         autocapture: false,
-        disable_session_recording: true,
+        disable_session_recording: false,
+        session_recording: { maskAllInputs: true },
+        enable_recording_console_log: false,
         person_profiles: 'never',
       }),
     );
+    expect(init.mock.calls[0][1].advanced_disable_feature_flags).not.toBe(true);
     init.mock.calls[0][1].loaded(client);
     expect(register).toHaveBeenCalledWith({ app: 'portfolio', environment: 'test' });
   });
