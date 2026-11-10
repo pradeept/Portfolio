@@ -24,7 +24,7 @@ export function ContactLinks() {
       </a>
       <a
         className="contact-tab contact-email"
-        href="mailto:pradeep.tarakar17@gmail.com"
+        href="mailto:hey@pradeept.dev"
         {...analyticsAttributes('contact_clicked', {
           location: 'contact',
           platform: 'email',

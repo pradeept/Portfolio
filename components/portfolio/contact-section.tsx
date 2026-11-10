@@ -27,6 +27,15 @@ export function ContactSection() {
           <span>© 2026 Pradeep Tarakar / still collecting tabs</span>
           <div>
             <a
+              href="mailto:hey@pradeept.dev"
+              {...analyticsAttributes('contact_clicked', {
+                location: 'footer',
+                platform: 'email',
+              })}
+            >
+              hey@pradeept.dev <DoodleArrow />
+            </a>
+            <a
               href="https://github.com/pradeept"
               {...analyticsAttributes('profile_clicked', {
                 location: 'footer',
